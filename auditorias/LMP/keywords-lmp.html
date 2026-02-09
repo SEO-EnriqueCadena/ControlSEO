@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BY ELEMENT | SYNLAB - Keyword Intelligence & Master Strategy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap');
+        
+        :root {
+            --synlab-blue: #002B49;
+            --lmp-orange: #F15A24;
+            --element-gray: #64748B;
+            --bg-light: #F9FAFB;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--synlab-blue);
+            background-color: white;
+            line-height: 1.5;
+        }
+
+        .section-header {
+            border-bottom: 2px solid var(--synlab-blue);
+            margin-bottom: 2.5rem;
+            padding-bottom: 0.75rem;
+        }
+
+        .hero-title {
+            font-weight: 900;
+            font-size: 3.5rem;
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.7rem;
+        }
+
+        .data-table th {
+            background-color: var(--bg-light);
+            text-transform: uppercase;
+            font-weight: 900;
+            font-size: 0.6rem;
+            letter-spacing: 0.1em;
+            color: var(--element-gray);
+            padding: 1.25rem 1rem;
+            border-bottom: 1px solid #E2E8F0;
+            text-align: left;
+        }
+
+        .data-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #F1F5F9;
+            vertical-align: middle;
+        }
+
+        .row-brand { background-color: #F0F9FF; }
+        .row-gap { background-color: #FFF7ED; }
+        .row-opportunity { background-color: #F5F3FF; }
+
+        .badge {
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 800;
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            display: inline-block;
+        }
+
+        .badge-pos { background: #E2E8F0; color: #1E293B; }
+        .badge-win { background: #DCFCE7; color: #166534; }
+        .badge-lose { background: #FEE2E2; color: #991B1B; }
+        .badge-ai { background: #EDE9FE; color: #6D28D9; border: 1px solid #DDD6FE; }
+        .badge-low-kd { background: #ECFDF5; color: #059669; }
+
+        .metric-card {
+            border-left: 1px solid #E2E8F0;
+            padding-left: 1.5rem;
+        }
+
+        .sticky-header {
+            position: sticky;
+            top: 73px;
+            background: white;
+            z-index: 40;
+            padding: 1rem 0;
+            border-bottom: 1px solid #F1F5F9;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navbar -->
+    <nav class="py-6 px-8 md:px-16 flex justify-between items-center border-b border-gray-100 sticky top-0 bg-white z-50">
+        <div class="flex items-center space-x-4">
+            <span class="text-xs font-black tracking-tighter text-slate-400 italic">BY ELEMENT | SYNLAB</span>
+            <div class="h-4 w-px bg-slate-200"></div>
+            <span class="text-xs font-bold uppercase tracking-widest text-[--synlab-blue]">LMP Master Intelligence Report</span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="text-[10px] font-black uppercase text-slate-400">Actualización: Feb 2026</span>
+            <div class="bg-[--lmp-orange] text-white px-4 py-1 rounded text-[9px] font-black uppercase tracking-widest">
+                Confidencial
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="py-20 px-8 md:px-16 max-w-7xl mx-auto">
+        <div class="mb-12">
+            <span class="text-[--lmp-orange] font-black text-xs uppercase tracking-[0.2em] mb-4 block">Estrategia Global de Keywords</span>
+            <h1 class="hero-title text-slate-900 leading-none">Dominio del Mercado Digital <br>y Cierre de Brechas.</h1>
+        </div>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-12 pt-12 border-t border-slate-100 font-bold">
+            <div class="metric-card">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Impresiones (90d)</span>
+                <p class="text-4xl font-black text-[--synlab-blue]">13,648,313</p>
+            </div>
+            <div class="metric-card">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Keywords Activas</span>
+                <p class="text-4xl font-black text-[--synlab-blue]">2,393</p>
+            </div>
+            <div class="metric-card">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Clicks Orgánicos</span>
+                <p class="text-4xl font-black text-[--lmp-orange]">256,189</p>
+            </div>
+            <div class="metric-card">
+                <span class="text-[10px] text-slate-400 uppercase tracking-widest">Potencial de Crecimiento</span>
+                <p class="text-4xl font-black text-green-600">+45%</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="px-8 md:px-16 max-w-7xl mx-auto pb-32 font-bold">
+
+        <!-- 01. INTELIGENCIA DE MARCA -->
+        <section class="mb-24">
+            <div class="section-header">
+                <h2 class="text-xl font-black uppercase tracking-tight">01. Auditoría de Marca: Fidelización Directa</h2>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8 mb-10">
+                <div class="lg:col-span-2">
+                    <p class="text-sm text-slate-500 mb-8 font-medium leading-relaxed">
+                        LMP posee una de las marcas más potentes del sector. Las posiciones medias son inferiores a 1.5, lo que garantiza que cualquier usuario que busque el laboratorio nos encuentre. El objetivo aquí es <strong>blindar la reputación</strong> y asegurar que las páginas de destino sean rápidas (CWV).
+                    </p>
+                    <div class="overflow-hidden border border-gray-100 rounded-2xl shadow-sm">
+                        <table class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Keyword de Marca</th>
+                                    <th class="text-right">Clics (90d)</th>
+                                    <th class="text-right">Impresiones</th>
+                                    <th class="text-center">Posición</th>
+                                    <th class="text-center">CTR</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="row-brand">
+                                    <td class="font-black italic">laboratorio medico polanco</td>
+                                    <td class="text-right">38,974</td>
+                                    <td class="text-right">92,874</td>
+                                    <td class="text-center"><span class="badge badge-pos">1.13</span></td>
+                                    <td class="text-center"><span class="badge badge-win">42.0%</span></td>
+                                </tr>
+                                <tr class="row-brand">
+                                    <td class="font-black italic">laboratorios polanco</td>
+                                    <td class="text-right">11,066</td>
+                                    <td class="text-right">28,771</td>
+                                    <td class="text-center"><span class="badge badge-pos">1.39</span></td>
+                                    <td class="text-center"><span class="badge badge-win">38.5%</span></td>
+                                </tr>
+                                <tr class="row-brand">
+                                    <td class="font-black italic">impolanco</td>
+                                    <td class="text-right">3,002</td>
+                                    <td class="text-right">5,904</td>
+                                    <td class="text-center"><span class="badge badge-pos">1.29</span></td>
+                                    <td class="text-center"><span class="badge badge-win">50.8%</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-8 rounded-3xl border border-slate-100 flex flex-col justify-center">
+                    <h4 class="text-xs font-black text-slate-400 uppercase mb-4 tracking-widest">Diagnóstico Element</h4>
+                    <p class="text-xs text-slate-600 leading-relaxed font-medium">
+                        La fuerza de marca subvenciona el tráfico total. Sin embargo, depender exclusivamente de ella es riesgoso. El 65% del tráfico actual es 'Branded'. Nuestra estrategia moverá ese peso hacia el tráfico por 'Servicio'.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. EL GAP: DONDE PERDEMOS PACIENTES -->
+        <section class="mb-24">
+            <div class="section-header">
+                <h2 class="text-xl font-black uppercase tracking-tight text-red-600">02. Market Gap Analysis (vs Competencia)</h2>
+            </div>
+            <div class="grid lg:grid-cols-4 gap-8 mb-10">
+                <div class="lg:col-span-3 overflow-hidden border border-gray-100 rounded-2xl shadow-sm">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Servicio Crítico</th>
+                                <th class="text-center">LMP (Pos)</th>
+                                <th class="text-center">Chopo</th>
+                                <th class="text-center">Salud Digna</th>
+                                <th class="text-center">Olab / Lapi</th>
+                                <th>Gap Real</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row-gap">
+                                <td class="font-black italic">Radiografías</td>
+                                <td class="text-center"><span class="badge badge-lose">59</span></td>
+                                <td class="text-center"><span class="badge badge-win">1</span></td>
+                                <td class="text-center"><span class="badge badge-pos">21</span></td>
+                                <td class="text-center"><span class="badge badge-win">6</span></td>
+                                <td class="text-[9px] text-red-600 uppercase font-black">-58 Posiciones</td>
+                            </tr>
+                            <tr class="row-gap">
+                                <td class="font-black italic">Prueba de Influenza</td>
+                                <td class="text-center"><span class="badge badge-lose">54</span></td>
+                                <td class="text-center"><span class="badge badge-pos">14</span></td>
+                                <td class="text-center"><span class="badge badge-win">3</span></td>
+                                <td class="text-center"><span class="badge badge-win">1</span></td>
+                                <td class="text-[9px] text-red-600 uppercase font-black">-53 Posiciones</td>
+                            </tr>
+                            <tr class="row-gap">
+                                <td class="font-black italic">Químicas Sanguíneas</td>
+                                <td class="text-center"><span class="badge badge-pos">14</span></td>
+                                <td class="text-center"><span class="badge badge-win">2</span></td>
+                                <td class="text-center"><span class="badge badge-win">9</span></td>
+                                <td class="text-center"><span class="badge badge-pos">13</span></td>
+                                <td class="text-[9px] text-orange-600 uppercase font-black">Top 10 Cercano</td>
+                            </tr>
+                            <tr class="row-gap">
+                                <td class="font-black italic">Rayos X</td>
+                                <td class="text-center"><span class="badge badge-pos">16</span></td>
+                                <td class="text-center"><span class="badge badge-win">5</span></td>
+                                <td class="text-center"><span class="badge badge-win">6</span></td>
+                                <td class="text-center"><span class="badge badge-win">9</span></td>
+                                <td class="text-[9px] text-orange-600 uppercase font-black">Captura en Q1</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="space-y-4">
+                    <div class="p-6 bg-red-50 rounded-2xl border border-red-100">
+                        <h4 class="text-[10px] font-black text-red-600 uppercase mb-2">Puntos de Fuga</h4>
+                        <p class="text-[11px] text-red-800 leading-tight">
+                            En 'Radiografía' e 'Influenza', el paciente no llega a la página 6 de Google. Estamos regalando el 100% de ese volumen a Chopo y Salud Digna.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. LA MATRIZ MAESTRA DE KEYWORDS -->
+        <section class="mb-24">
+            <div class="section-header">
+                <h2 class="text-xl font-black uppercase tracking-tight">03. Master Keyword Matrix (Semrush + GSC)</h2>
+            </div>
+            <div class="overflow-hidden border border-gray-100 rounded-2xl shadow-sm">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Keyword del Estudio</th>
+                            <th class="text-right">Volumen (MS)</th>
+                            <th class="text-center">KD%</th>
+                            <th class="text-right">Impresiones (GSC)</th>
+                            <th class="text-center">Posición Actual</th>
+                            <th class="text-center">Features</th>
+                            <th>Oportunidad</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-xs">
+                        <tr class="row-high-vol">
+                            <td class="font-black italic">antigeno prostatico</td>
+                            <td class="text-right">18,100</td>
+                            <td class="text-center"><span class="badge badge-pos">43%</span></td>
+                            <td class="text-right">3,607</td>
+                            <td class="text-center"><span class="badge badge-pos">6.2</span></td>
+                            <td class="text-center"><span class="badge badge-ai">AI Overview</span></td>
+                            <td class="text-purple-600 uppercase font-black">GEO Target / Autoridad</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black italic">perfil tiroideo</td>
+                            <td class="text-right">14,545</td>
+                            <td class="text-center"><span class="badge badge-lose">65%</span></td>
+                            <td class="text-right">71,833</td>
+                            <td class="text-center"><span class="badge badge-pos">3.8</span></td>
+                            <td class="text-center"><i class="fas fa-ad text-slate-300"></i></td>
+                            <td class="text-red-600 uppercase font-black">Crítico: Optimizar CTR</td>
+                        </tr>
+                        <tr class="row-high-vol">
+                            <td class="font-black italic">biometria hematica</td>
+                            <td class="text-right">14,157</td>
+                            <td class="text-center"><span class="badge badge-pos">41%</span></td>
+                            <td class="text-right">104,228</td>
+                            <td class="text-center"><span class="badge badge-pos">7.9</span></td>
+                            <td class="text-center"><span class="badge badge-ai">SGE</span></td>
+                            <td class="text-blue-600 uppercase font-black">High ROI Potential</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black italic">quantiferon gold</td>
+                            <td class="text-right">1,600</td>
+                            <td class="text-center"><span class="badge badge-low-kd">19%</span></td>
+                            <td class="text-right">2,519</td>
+                            <td class="text-center"><span class="badge badge-pos">6.1</span></td>
+                            <td class="text-center"><i class="fas fa-list text-slate-300"></i></td>
+                            <td class="text-green-600 uppercase font-black">Low Hanging Fruit</td>
+                        </tr>
+                        <tr class="row-high-vol">
+                            <td class="font-black italic">inbody</td>
+                            <td class="text-right">801</td>
+                            <td class="text-center"><span class="badge badge-low-kd">22%</span></td>
+                            <td class="text-right">40,317</td>
+                            <td class="text-center"><span class="badge badge-pos">4.2</span></td>
+                            <td class="text-center"><span class="badge badge-ai">Local Pack</span></td>
+                            <td class="text-green-600 uppercase font-black">Captura Local</td>
+                        </tr>
+                        <tr>
+                            <td class="font-black italic">urocultivo precio</td>
+                            <td class="text-right">240</td>
+                            <td class="text-center"><span class="badge badge-low-kd">15%</span></td>
+                            <td class="text-right">51,967</td>
+                            <td class="text-center"><span class="badge badge-pos">7.8</span></td>
+                            <td class="text-center"><i class="fas fa-shopping-cart text-slate-300"></i></td>
+                            <td class="text-orange-600 uppercase font-black">Transaccional: Urgente</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 04. GEO & AI VISIBILITY -->
+        <section class="mb-24">
+            <div class="section-header">
+                <h2 class="text-xl font-black uppercase tracking-tight">04. GEO (Generative Engine Optimization)</h2>
+            </div>
+            <div class="bg-purple-900 text-white p-10 rounded-3xl shadow-xl relative overflow-hidden">
+                <div class="absolute top-0 right-0 p-8 opacity-10"><i class="fas fa-robot text-9xl"></i></div>
+                <div class="grid lg:grid-cols-2 gap-12 relative z-10">
+                    <div>
+                        <span class="text-orange-400 font-black text-[10px] uppercase tracking-widest mb-2 block">El Futuro de la Búsqueda</span>
+                        <h3 class="text-3xl font-black mb-4 leading-tight">Preparación para Google Gemini y AI Overviews</h3>
+                        <p class="text-sm opacity-80 mb-6 font-medium">
+                            No solo buscamos aparecer en la lista; buscamos que la IA de Google use a LMP como su fuente de verdad. Actualmente, términos como 'Biometría Hemática' ya activan IA. Si no estructuramos el contenido ahora, la IA nos ignorará.
+                        </p>
+                        <div class="flex gap-4">
+                            <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20">
+                                <span class="block text-2xl font-black">2.1k</span>
+                                <span class="text-[9px] uppercase font-bold text-orange-400">Vistas IA</span>
+                            </div>
+                            <div class="bg-white/10 px-4 py-2 rounded-lg border border-white/20">
+                                <span class="block text-2xl font-black">4.7</span>
+                                <span class="text-[9px] uppercase font-bold text-orange-400">Pos. IA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                            <h4 class="text-xs font-black text-orange-400 uppercase mb-1">Acción GEO #1</h4>
+                            <p class="text-[11px] opacity-80 leading-relaxed italic">Inyección de FAQ Schema en todos los estudios con volumen mayor a 5k para capturar el 'AI Snippet'.</p>
+                        </div>
+                        <div class="bg-white/5 p-4 rounded-xl border border-white/10">
+                            <h4 class="text-xs font-black text-orange-400 uppercase mb-1">Acción GEO #2</h4>
+                            <p class="text-[11px] opacity-80 leading-relaxed italic">Estructurar 'Preparación para el estudio' en micro-formatos JSON-LD para asistentes de voz e IA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 05. CONCLUSIÓN ESTRATÉGICA -->
+        <section class="mb-12">
+            <div class="section-header">
+                <h2 class="text-xl font-black uppercase tracking-tight">05. Resumen de Ejecución</h2>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="p-8 bg-slate-50 border border-slate-100 rounded-3xl">
+                    <h4 class="text-[--synlab-blue] font-black uppercase text-xs mb-4 tracking-widest">Diagnóstico de Negocio</h4>
+                    <p class="text-sm text-slate-600 leading-relaxed font-medium">
+                        LMP tiene la autoridad de marca, pero sufre de <strong>Anemia de Contenido</strong> en páginas transaccionales. Corregir el 'Thin Content' de las 410 URLs y optimizar los Meta Títulos de 'La Mina de Oro' generará un crecimiento de ingresos sin inversión adicional en pauta.
+                    </p>
+                </div>
+                <div class="p-8 bg-slate-900 text-white rounded-3xl">
+                    <h4 class="text-orange-400 font-black uppercase text-xs mb-4 tracking-widest">Pronóstico Q1-Q2</h4>
+                    <p class="text-sm opacity-80 leading-relaxed font-medium">
+                        Al implementar el Roadmap SEO & GEO, proyectamos un <strong>aumento del 25% en clics orgánicos</strong> enfocados en estudios de alto ticket (Radiografías y Resonancias), donde el Gap con la competencia es hoy nuestra mayor oportunidad de robo de mercado.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[--synlab-blue] text-white py-20 px-8 md:px-16 font-bold">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-12 md:mb-0">
+                <p class="text-[10px] font-extrabold uppercase tracking-[0.4em] opacity-40 mb-6">BY ELEMENT | SYNLAB</p>
+                <p class="text-sm font-medium opacity-80 max-w-sm italic leading-relaxed">
+                    "Transformando el Big Data en decisiones estratégicas de salud digital."
+                </p>
+            </div>
+            <div class="text-center md:text-right">
+                <button class="bg-[--lmp-orange] text-white text-xs font-black uppercase tracking-widest px-12 py-5 rounded-full hover:scale-105 transition-all shadow-2xl mb-4">
+                    AUTORIZAR PLAN MAESTRO
+                </button>
+                <p class="text-[9px] opacity-30 uppercase tracking-widest">© 2026 Laboratorio Médico Polanco | Consultoría Estratégica SEO</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
