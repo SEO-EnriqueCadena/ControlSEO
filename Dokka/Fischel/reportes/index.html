@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Reportes SEO | Fischel</title>
+    <!-- Fuente Montserrat -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-color: #000000;
+            --accent-bg: #f8f8f8;
+            --border-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .hub-container {
+            width: 100%;
+            max-width: 600px;
+            border: 2px solid var(--border-color);
+            padding: 40px;
+            position: relative;
+        }
+
+        /* Decoración esquinas estilo técnico */
+        .hub-container::before {
+            content: "CLIENT_ID: FISCHEL_SEO";
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        header {
+            margin-bottom: 40px;
+        }
+
+        .breadcrumb {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+            opacity: 0.6;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+
+        .report-list {
+            list-style: none;
+            margin-top: 30px;
+        }
+
+        .report-item {
+            border-bottom: 1px solid #eee;
+            transition: all 0.2s ease;
+        }
+
+        .report-item:last-child {
+            border-bottom: none;
+        }
+
+        .report-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            text-decoration: none;
+            color: inherit;
+            font-weight: 400;
+            transition: padding 0.3s ease;
+        }
+
+        .report-link:hover {
+            padding-left: 10px;
+            background-color: var(--accent-bg);
+        }
+
+        .month-name {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .report-type {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background: #000;
+            color: #fff;
+            padding: 2px 8px;
+            font-weight: 300;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 50px;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-bottom: 1px solid var(--text-color);
+            padding-bottom: 2px;
+        }
+
+        .back-link:hover {
+            opacity: 0.6;
+        }
+
+        footer {
+            margin-top: 40px;
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.4;
+        }
+
+        /* Estado para reportes no disponibles aún */
+        .disabled {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hub-container">
+        <header>
+            <span class="breadcrumb">Dokka / Fischel</span>
+            <h1>Historial de Reportes</h1>
+        </header>
+
+        <ul class="report-list">
+            <!-- Enero -->
+            <li class="report-item">
+                <a href="enero.html" class="report-link">
+                    <span class="month-name">Enero 2026</span>
+                    <span class="report-type">Performance</span>
+                </a>
+            </li>
+
+            <!-- Febrero (Como ejemplo desactivado) -->
+            <li class="report-item">
+                <a href="#" class="report-link disabled">
+                    <span class="month-name">Febrero 2026</span>
+                    <span class="report-type">Próximamente</span>
+                </a>
+            </li>
+
+            <!-- Marzo (Como ejemplo desactivado) -->
+            <li class="report-item">
+                <a href="#" class="report-link disabled">
+                    <span class="month-name">Marzo 2026</span>
+                    <span class="report-type">Próximamente</span>
+                </a>
+            </li>
+        </ul>
+
+        <a href="../../../index.html" class="back-link">← Volver al Panel Global</a>
+
+        <footer>
+            Enrique Cadena | SEO Manager
+        </footer>
+    </div>
+
+</body>
+</html>
