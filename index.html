@@ -4,158 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Control SEO | Enrique Cadena</title>
-    <!-- Fuente Montserrat desde Google Fonts -->
+    <title>Control SEO | Dashboard Global</title>
+    <!-- Montserrat Font -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #ffffff;
-            --text-color: #000000;
-            --accent-color: #f4f4f4;
-            --border-color: #e0e0e0;
-            --transition: all 0.3s ease;
+            --bg: #ffffff;
+            --text: #000000;
+            --gray: #f4f4f4;
+            --border: #e0e0e0;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: 'Montserrat', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
+            background-color: var(--bg);
+            color: var(--text);
             padding: 40px 20px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-        }
+        .container { max-width: 1000px; margin: 0 auto; }
 
         header {
-            border-bottom: 2px solid var(--text-color);
+            border-bottom: 3px solid var(--text);
             padding-bottom: 20px;
-            margin-bottom: 50px;
+            margin-bottom: 40px;
             display: flex;
             justify-content: space-between;
             align-items: flex-end;
         }
 
-        header h1 {
-            font-weight: 700;
-            font-size: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-        }
+        header h1 { font-size: 2.5rem; text-transform: uppercase; font-weight: 700; }
+        header p { font-size: 0.8rem; letter-spacing: 3px; text-transform: uppercase; }
 
-        header p {
-            font-weight: 300;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .search-container {
-            margin-bottom: 30px;
-        }
-
-        #filterInput {
+        .search-box { margin-bottom: 40px; }
+        #clientSearch {
             width: 100%;
-            padding: 12px;
-            border: 1px solid var(--text-color);
+            padding: 15px;
+            border: 1px solid var(--text);
             font-family: 'Montserrat', sans-serif;
             font-size: 1rem;
             outline: none;
         }
 
-        .category-section {
-            margin-bottom: 40px;
-        }
-
-        .category-title {
-            font-weight: 700;
+        .section-title {
             font-size: 1.2rem;
-            border-left: 5px solid var(--text-color);
-            padding-left: 15px;
-            margin-bottom: 20px;
+            font-weight: 700;
             text-transform: uppercase;
+            margin: 40px 0 20px 0;
+            border-left: 6px solid var(--text);
+            padding-left: 15px;
         }
 
-        .grid {
+        .client-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
         }
 
-        /* Estilos de las Cards */
-        .client-card {
-            border: 1px solid var(--border-color);
-            padding: 20px;
-            transition: var(--transition);
+        .card {
+            border: 1px solid var(--border);
+            padding: 25px;
+            transition: all 0.3s ease;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
-        .client-card:hover {
-            background-color: var(--text-color);
-            color: var(--bg-color);
-            border-color: var(--text-color);
+        .card:hover {
+            border-color: var(--text);
+            box-shadow: 10px 10px 0px var(--text);
+            transform: translate(-5px, -5px);
         }
 
-        .client-card h3 {
-            font-size: 1rem;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .client-card .sub-label {
-            font-size: 0.75rem;
+        .card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
             text-transform: uppercase;
-            opacity: 0.7;
-            margin-bottom: 15px;
+        }
+
+        .card .group-label {
+            font-size: 0.65rem;
+            font-weight: 300;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
             display: block;
         }
 
-        .report-links {
+        .actions {
             display: flex;
-            flex-wrap: wrap;
             gap: 10px;
+            margin-top: auto;
         }
 
-        .btn-report {
-            font-size: 0.8rem;
+        .btn {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
             text-decoration: none;
-            color: inherit;
-            border: 1px solid currentColor;
-            padding: 5px 10px;
-            transition: var(--transition);
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: 0.2s;
         }
 
-        .btn-report:hover {
-            background-color: var(--bg-color);
-            color: var(--text-color);
+        .btn-main {
+            background-color: var(--text);
+            color: var(--bg);
+        }
+
+        .btn-sub {
+            border: 1px solid var(--text);
+            color: var(--text);
+        }
+
+        .btn:hover {
+            opacity: 0.7;
         }
 
         footer {
-            margin-top: 100px;
+            margin-top: 80px;
             text-align: center;
-            font-size: 0.8rem;
-            font-weight: 300;
-            border-top: 1px solid var(--border-color);
-            padding-top: 20px;
+            font-size: 0.7rem;
+            opacity: 0.5;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        /* Responsive */
         @media (max-width: 600px) {
-            header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
             header h1 { font-size: 1.8rem; }
+            .client-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -165,148 +145,125 @@
         <header>
             <div>
                 <h1>Control SEO</h1>
-                <p>Manager Dashboard</p>
+                <p>Enrique Cadena | Manager</p>
             </div>
-            <div>
-                <p>2026 Edition</p>
-            </div>
+            <p>v.2.0</p>
         </header>
 
-        <div class="search-container">
-            <input type="text" id="filterInput" placeholder="Buscar cliente o auditoría..." onkeyup="filterClients()">
+        <div class="search-box">
+            <input type="text" id="clientSearch" placeholder="FILTRAR CLIENTE..." onkeyup="filterClients()">
         </div>
 
-        <!-- SECCIÓN: CLIENTES DIRECTOS -->
-        <section class="category-section">
-            <h2 class="category-title">Cuentas Directas</h2>
-            <div class="grid">
-                <!-- Coopecaja -->
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Corporativo</span>
-                        <h3>Coopecaja</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="Coopecaja/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
-                </div>
-
-                <!-- Aeropuerto -->
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Turismo</span>
-                        <h3>Aeropuerto Guanacaste</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="AeropuertoGuanacaste/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
+        <!-- CUENTAS DIRECTAS -->
+        <h2 class="section-title">Cuentas Directas</h2>
+        <div class="client-grid">
+            <!-- Coopecaja -->
+            <div class="card">
+                <span class="group-label">Financiero</span>
+                <h3>Coopecaja</h3>
+                <div class="actions">
+                    <a href="Coopecaja/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="Coopecaja/reportes/enero.html" class="btn btn-sub">Enero</a>
                 </div>
             </div>
-        </section>
 
-        <!-- SECCIÓN: GRUPO DOKKA -->
-        <section class="category-section">
-            <h2 class="category-title">Grupo Dokka</h2>
-            <div class="grid">
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Salud / Retail</span>
-                        <h3>Fischel</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="Dokka/Fischel/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
-                </div>
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Salud / Retail</span>
-                        <h3>La Bomba</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="Dokka/LaBomba/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
+            <!-- Aeropuerto -->
+            <div class="card">
+                <span class="group-label">Infraestructura</span>
+                <h3>Aeropuerto Guanacaste</h3>
+                <div class="actions">
+                    <a href="AeropuertoGuanacaste/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="AeropuertoGuanacaste/reportes/enero.html" class="btn btn-sub">Enero</a>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- SECCIÓN: GRUPO MATRA -->
-        <section class="category-section">
-            <h2 class="category-title">Grupo MATRA</h2>
-            <div class="grid">
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Maquinaria</span>
-                        <h3>MATRA Principal</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="MATRA/MATRA/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
-                </div>
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Automotriz</span>
-                        <h3>Autolub</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="MATRA/Autolub/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
-                </div>
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Logística</span>
-                        <h3>El Camionero</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="MATRA/ElCamionero/reporte-enero/index.html" class="btn-report">Enero</a>
-                    </div>
+        <!-- GRUPO DOKKA -->
+        <h2 class="section-title">Grupo Dokka</h2>
+        <div class="client-grid">
+            <div class="card">
+                <span class="group-label">Retail Salud</span>
+                <h3>Fischel</h3>
+                <div class="actions">
+                    <a href="Dokka/Fischel/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="Dokka/Fischel/reportes/enero.html" class="btn btn-sub">Enero</a>
                 </div>
             </div>
-        </section>
-
-        <!-- SECCIÓN: AUDITORÍAS -->
-        <section class="category-section">
-            <h2 class="category-title">Auditorías Técnicas</h2>
-            <div class="grid">
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Banca</span>
-                        <h3>Abank</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="Auditorias/abank/index.html" class="btn-report">Ver Auditoría</a>
-                    </div>
-                </div>
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Retail</span>
-                        <h3>Auto Mercado</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="Auditorias/automercado/index.html" class="btn-report">Ver Auditoría</a>
-                    </div>
-                </div>
-                <div class="client-card">
-                    <div>
-                        <span class="sub-label">Industrial</span>
-                        <h3>LMP</h3>
-                    </div>
-                    <div class="report-links">
-                        <a href="Auditorias/LMP/index.html" class="btn-report">Ver Auditoría</a>
-                    </div>
+            <div class="card">
+                <span class="group-label">Retail Salud</span>
+                <h3>La Bomba</h3>
+                <div class="actions">
+                    <a href="Dokka/LaBomba/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="Dokka/LaBomba/reportes/enero.html" class="btn btn-sub">Enero</a>
                 </div>
             </div>
-        </section>
+        </div>
+
+        <!-- GRUPO MATRA -->
+        <h2 class="section-title">Grupo MATRA</h2>
+        <div class="client-grid">
+            <div class="card">
+                <span class="group-label">Maquinaria</span>
+                <h3>MATRA</h3>
+                <div class="actions">
+                    <a href="MATRA/MATRA/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="MATRA/MATRA/reportes/enero.html" class="btn btn-sub">Enero</a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="group-label">Automotriz</span>
+                <h3>Autolub</h3>
+                <div class="actions">
+                    <a href="MATRA/Autolub/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="MATRA/Autolub/reportes/enero.html" class="btn btn-sub">Enero</a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="group-label">Logística</span>
+                <h3>El Camionero</h3>
+                <div class="actions">
+                    <a href="MATRA/ElCamionero/reportes/index.html" class="btn btn-main">Historial</a>
+                    <a href="MATRA/ElCamionero/reportes/enero.html" class="btn btn-sub">Enero</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- AUDITORÍAS -->
+        <h2 class="section-title">Auditorías Técnicas</h2>
+        <div class="client-grid">
+            <div class="card">
+                <span class="group-label">Banca</span>
+                <h3>Abank</h3>
+                <div class="actions">
+                    <a href="Auditorias/abank/index.html" class="btn btn-main">Ver Auditoría</a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="group-label">Retail</span>
+                <h3>Auto Mercado</h3>
+                <div class="actions">
+                    <a href="Auditorias/automercado/index.html" class="btn btn-main">Ver Auditoría</a>
+                </div>
+            </div>
+            <div class="card">
+                <span class="group-label">Industrial</span>
+                <h3>LMP</h3>
+                <div class="actions">
+                    <a href="Auditorias/LMP/index.html" class="btn btn-main">Ver Auditoría</a>
+                </div>
+            </div>
+        </div>
 
         <footer>
-            <p>&copy; 2026 | MMG | Enrique Cadena | SEO Manager Global Hub</p>
+            © 2026 | MMG | Enrique Cadena | SEO Manager Global Hub
         </footer>
     </div>
 
     <script>
         function filterClients() {
-            let input = document.getElementById('filterInput');
+            let input = document.getElementById('clientSearch');
             let filter = input.value.toUpperCase();
-            let cards = document.getElementsByClassName('client-card');
+            let cards = document.getElementsByClassName('card');
 
             for (let i = 0; i < cards.length; i++) {
                 let h3 = cards[i].getElementsByTagName('h3')[0];
