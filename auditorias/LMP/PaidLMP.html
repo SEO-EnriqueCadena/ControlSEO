@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Publicidad LMP 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc;
+        }
+
+        .gradient-header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: #3b82f6;
+        }
+
+        .brand-badge {
+            font-size: 0.7rem;
+            padding: 2px 8px;
+            border-radius: 9999px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <!-- Header -->
+    <header class="gradient-header text-white py-12 px-6 shadow-lg">
+        <div class="max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div>
+                    <h1 class="text-3xl md:text-4xl font-bold mb-2">Reporte de Análisis Publicitario 2025</h1>
+                    <p class="text-blue-100 text-lg">Laboratorio Médico Polanco (LMP) vs. Competencia</p>
+                </div>
+                <div class="mt-6 md:mt-0 bg-white/10 backdrop-blur-md p-4 rounded-lg border border-white/20">
+                    <p class="text-sm font-semibold uppercase tracking-wider">Periodo</p>
+                    <p class="text-xl font-bold">Ene - Dic 2025</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-6xl mx-auto px-6 py-10">
+
+        <!-- KPIs Resumen -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <div class="card p-6 border-l-4 border-blue-600">
+                <div class="flex items-center mb-4">
+                    <div class="p-3 bg-blue-100 rounded-full text-blue-600 mr-4">
+                        <i class="fa-solid fa-calculator text-xl"></i>
+                    </div>
+                    <h3 class="text-slate-500 font-semibold">Inversión Total</h3>
+                </div>
+                <p class="text-2xl font-bold text-slate-900">$49.4 M <span class="text-sm text-slate-400 font-normal">MXN</span></p>
+            </div>
+
+            <div class="card p-6 border-l-4 border-indigo-600">
+                <div class="flex items-center mb-4">
+                    <div class="p-3 bg-indigo-100 rounded-full text-indigo-600 mr-4">
+                        <i class="fa-solid fa-eye text-xl"></i>
+                    </div>
+                    <h3 class="text-slate-500 font-semibold">Impresiones</h3>
+                </div>
+                <p class="text-2xl font-bold text-slate-900">943.7 M</p>
+            </div>
+
+            <div class="card p-6 border-l-4 border-green-600">
+                <div class="flex items-center mb-4">
+                    <div class="p-3 bg-green-100 rounded-full text-green-600 mr-4">
+                        <i class="fa-solid fa-bullseye text-xl"></i>
+                    </div>
+                    <h3 class="text-slate-500 font-semibold">Share LMP</h3>
+                </div>
+                <p class="text-2xl font-bold text-slate-900">10.22%</p>
+            </div>
+
+            <div class="card p-6 border-l-4 border-orange-600">
+                <div class="flex items-center mb-4">
+                    <div class="p-3 bg-orange-100 rounded-full text-orange-600 mr-4">
+                        <i class="fa-solid fa-trophy text-xl"></i>
+                    </div>
+                    <h3 class="text-slate-500 font-semibold">Líder (Chopo)</h3>
+                </div>
+                <p class="text-2xl font-bold text-slate-900">67.9%</p>
+            </div>
+        </section>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="lg:col-span-2 space-y-8">
+                
+                <!-- Share de Inversión por Marca -->
+                <section class="card p-8">
+                    <div class="flex justify-between items-center mb-6">
+                        <h2 class="text-xl font-bold flex items-center">
+                            <i class="fa-solid fa-layer-group mr-3 text-blue-600"></i> Distribución de Inversión Digital
+                        </h2>
+                        <span class="text-xs font-bold text-slate-400">VALORES EN MXN</span>
+                    </div>
+                    
+                    <div class="space-y-6">
+                        <!-- Chopo -->
+                        <div class="group">
+                            <div class="flex justify-between items-end mb-2">
+                                <div>
+                                    <span class="text-sm font-bold text-slate-700">Chopo</span>
+                                    <span class="ml-2 brand-badge bg-blue-100 text-blue-700">Líder Dominante</span>
+                                </div>
+                                <div class="text-right">
+                                    <span class="text-sm font-bold text-slate-900">$33,600,000</span>
+                                    <span class="text-xs text-slate-500 ml-1">(67.9%)</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill bg-blue-600" style="width: 67.9%"></div></div>
+                        </div>
+
+                        <!-- Salud Digna -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-sm font-bold text-slate-700">Salud Digna</span>
+                                <div class="text-right">
+                                    <span class="text-sm font-bold text-slate-900">$5,050,000</span>
+                                    <span class="text-xs text-slate-500 ml-1">(10.2%)</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill bg-indigo-500" style="width: 10.2%"></div></div>
+                        </div>
+
+                        <!-- LMP -->
+                        <div class="bg-blue-50 p-3 rounded-lg -mx-3 border-l-4 border-blue-600">
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-sm font-bold text-blue-900">LMP (Polanco)</span>
+                                <div class="text-right">
+                                    <span class="text-sm font-bold text-blue-900">$5,050,000</span>
+                                    <span class="text-xs text-blue-700 ml-1">(10.2%)</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill bg-blue-800" style="width: 10.2%"></div></div>
+                        </div>
+
+                        <!-- Lapi -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-sm font-bold text-slate-700">Lapi</span>
+                                <div class="text-right">
+                                    <span class="text-sm font-bold text-slate-900">$4,960,000</span>
+                                    <span class="text-xs text-slate-500 ml-1">(10.0%)</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill bg-slate-400" style="width: 10.0%"></div></div>
+                        </div>
+
+                        <!-- Ruiz -->
+                        <div>
+                            <div class="flex justify-between items-end mb-2">
+                                <span class="text-sm font-bold text-slate-700">Ruiz</span>
+                                <div class="text-right">
+                                    <span class="text-sm font-bold text-slate-900">$796,000</span>
+                                    <span class="text-xs text-slate-500 ml-1">(1.6%)</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar"><div class="progress-fill bg-slate-300" style="width: 1.6%"></div></div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-4 bg-slate-50 rounded-lg border border-slate-200">
+                        <p class="text-xs text-slate-600">
+                            <i class="fa-solid fa-circle-info mr-1"></i> <strong>Conclusión:</strong> El mercado no está fragmentado, está <strong>dominado</strong> por Chopo. Para que LMP escale al 15%-20% de share, requiere un incremento de inversión objetivo de entre +$2.3M y +$4.8M MXN anuales.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="card p-8">
+                    <h2 class="text-xl font-bold mb-6 flex items-center">
+                        <i class="fa-solid fa-users-viewfinder mr-3 text-blue-600"></i> Benchmarking de Competidores
+                    </h2>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead>
+                                <tr class="text-slate-400 text-sm border-b">
+                                    <th class="pb-3 font-semibold">Marca</th>
+                                    <th class="pb-3 font-semibold">Inversión Digital</th>
+                                    <th class="pb-3 font-semibold">Canal de Fuerza</th>
+                                    <th class="pb-3 font-semibold">Foco Estratégico</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y text-sm">
+                                <tr>
+                                    <td class="py-4 font-bold text-slate-700">Chopo</td>
+                                    <td class="py-4">$33.6M</td>
+                                    <td class="py-4 text-xs">Display Multi-sitio</td>
+                                    <td class="py-4">Dominio estructural</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 font-bold text-slate-700">Salud Digna</td>
+                                    <td class="py-4">$5.05M</td>
+                                    <td class="py-4 text-xs">Meta / Video</td>
+                                    <td class="py-4">Campañas Estacionales</td>
+                                </tr>
+                                <tr class="bg-blue-50/50">
+                                    <td class="py-4 font-bold text-blue-700 italic">LMP</td>
+                                    <td class="py-4 font-bold text-blue-700">$5.05M</td>
+                                    <td class="py-4 text-xs">Facebook / News</td>
+                                    <td class="py-4">Captura de Demanda</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-4 font-bold text-slate-700">Lapi</td>
+                                    <td class="py-4">$4.96M</td>
+                                    <td class="py-4 text-xs">YouTube Ads</td>
+                                    <td class="py-4">Educación Paciente</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Sidebar / Recomendaciones -->
+            <div class="space-y-8">
+                <section class="bg-blue-900 text-white p-8 rounded-xl shadow-lg">
+                    <h2 class="text-xl font-bold mb-6 flex items-center text-blue-200">
+                        <i class="fa-solid fa-rocket mr-3"></i> Escenarios 2026
+                    </h2>
+                    <p class="text-sm mb-6 text-blue-100 italic">Objetivos de crecimiento estructural:</p>
+                    <ul class="space-y-6">
+                        <li class="border-b border-blue-800 pb-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold">Target 15%</span>
+                                <span class="text-xs bg-blue-700 px-2 py-1 rounded">+$2.3M</span>
+                            </div>
+                            <p class="text-xs text-blue-200">Incremento del 46% para asegurar el segundo puesto.</p>
+                        </li>
+                        <li class="border-b border-blue-800 pb-4">
+                            <div class="flex justify-between items-center mb-1">
+                                <span class="font-bold">Target 20%</span>
+                                <span class="text-xs bg-blue-700 px-2 py-1 rounded">+$4.8M</span>
+                            </div>
+                            <p class="text-xs text-blue-200">Inversión total objetivo: $9.88M MXN.</p>
+                        </li>
+                        <li>
+                            <div class="flex justify-between items-center mb-1 text-orange-300">
+                                <span class="font-bold uppercase tracking-tighter">Dominio Top 2</span>
+                                <span class="text-xs bg-orange-700 text-white px-2 py-1 rounded">+145%</span>
+                            </div>
+                            <p class="text-xs text-blue-100">Escalar al 25% de share para desestabilizar el liderazgo actual.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="card p-8">
+                    <h2 class="text-xl font-bold mb-4 flex items-center text-slate-700">
+                        <i class="fa-solid fa-chart-line mr-3 text-blue-600"></i> Oportunidad SEM
+                    </h2>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                        LMP actualmente captura solo el <strong>1.4% del volumen total</strong> de búsquedas genéricas de salud en México.
+                    </p>
+                    <div class="p-3 bg-red-50 border border-red-100 rounded text-red-700 text-xs font-bold">
+                        <i class="fa-solid fa-warning mr-1"></i> Estamos regalando el 90% del mercado de búsquedas informativas a Chopo y Salud Digna.
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-10 text-slate-400 text-sm">
+        <p>Generado para Laboratorio Médico Polanco &copy; 2025 | Basado en Auditoría Estratégica</p>
+    </footer>
+
+</body>
+</html>
