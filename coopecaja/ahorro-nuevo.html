@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Ahorro Programado hasta 8% | Coopecaja Costa Rica</title>
+    <meta name="description" content="Gana hasta un 8.00% de interés con los planes de ahorro de Coopecaja. Ahorro para Marchamo, Navideño, Escolar y Futuro. ¡Asóciese y cumpla sus metas hoy!">
+    
+    <!-- Tailwind CSS para diseño moderno -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --coope-blue: #015cb9;
+            --coope-cyan: #00aeef;
+            --coope-yellow: #f9b000;
+            --coope-gray: #6a7793;
+            --coope-bg: #f4f7f9;
+        }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--coope-bg); scroll-behavior: smooth; }
+        .bg-coope-blue { background-color: var(--coope-blue); }
+        .text-coope-blue { color: var(--coope-blue); }
+        .bg-coope-cyan { background-color: var(--coope-cyan); }
+        .text-coope-cyan { color: var(--coope-cyan); }
+        .bg-coope-yellow { background-color: var(--coope-yellow); }
+        .border-coope-cyan { border-color: var(--coope-cyan); }
+        
+        details > summary { list-style: none; }
+        details > summary::-webkit-details-marker { display: none; }
+    </style>
+
+    <!-- DATOS ESTRUCTURADOS (SEO/GEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "FinancialProduct",
+          "name": "Ahorro Futuro Coopecaja",
+          "description": "Plan de ahorro a mediano plazo con la tasa más alta del mercado.",
+          "annualPercentageRate": "8.00%",
+          "feesAndCommissionsUsageInstruction": "Cuota mínima ₡7,000",
+          "provider": {
+            "@type": "BankOrCreditUnion",
+            "name": "Coopecaja",
+            "url": "https://www.coopecaja.fi.cr"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "¿Cuál es la mejor tasa de ahorro en Coopecaja?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "La mejor tasa la ofrece el Ahorro Futuro con un 8.00% de interés anual."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="text-slate-800">
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <img src="https://www.coopecaja.fi.cr/image/company_logo?img_id=205314" alt="Coopecaja Logo" class="h-10 md:h-12">
+            </div>
+            <div class="hidden lg:flex space-x-6 font-bold text-sm uppercase text-coope-blue">
+                <a href="#" class="hover:text-coope-cyan transition">Inicio</a>
+                <a href="#detalles" class="text-coope-cyan border-b-2 border-coope-cyan">Productos</a>
+                <a href="#" class="hover:text-coope-cyan transition">Servicios</a>
+                <a href="#" class="hover:text-coope-cyan transition">Beneficios</a>
+                <a href="#" class="hover:text-coope-cyan transition">Contacto</a>
+            </div>
+            <div class="flex space-x-2">
+                <button class="bg-coope-blue text-white px-4 py-2 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg">Gestión Virtual →</button>
+                <button class="bg-coope-yellow text-white px-4 py-2 rounded-full text-sm font-bold hover:opacity-90 transition shadow-lg">Coopecaja en Línea →</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="relative bg-coope-blue overflow-hidden min-h-[550px] flex items-center">
+        <div class="absolute inset-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80&w=1920" alt="Fondo Ahorro" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="container mx-auto px-4 relative z-10 py-12">
+            <div class="flex flex-wrap items-center">
+                <div class="w-full lg:w-1/2 text-white mb-10 lg:mb-0">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-piggy-bank text-5xl mr-4 text-coope-yellow"></i>
+                        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">Ahorros que <br><span class="text-coope-cyan">cumplen sueños</span></h1>
+                    </div>
+                    <p class="text-xl mb-8 max-w-lg">Planes de ahorro programado con tasas de hasta el 8.00%. Diseñados para cada meta: Marchamo, Navidad, Educación y tu futuro.</p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#detalles" class="bg-white text-coope-blue px-6 py-3 rounded-xl font-bold shadow-xl hover:bg-slate-100 transition">Conocer Planes</a>
+                    </div>
+                </div>
+
+                <!-- Calculadora -->
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end">
+                    <div class="bg-white rounded-3xl shadow-2xl p-6 md:p-8 w-full max-w-md border-t-8 border-coope-cyan">
+                        <h2 class="text-2xl font-bold text-coope-blue mb-6 text-center">Calcule su Ahorro</h2>
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-600 mb-1 font-bold italic">Seleccione su meta</label>
+                                <select class="w-full border-2 border-slate-100 rounded-xl p-3 focus:border-coope-cyan outline-none bg-slate-50 transition">
+                                    <option>Ahorro Futuro (8.00%)</option>
+                                    <option>Ahorro Marchamo (5.50%)</option>
+                                    <option>Ahorro Navideño (5.50%)</option>
+                                    <option>Ahorro Escolar (5.50%)</option>
+                                    <option>Ahorro a la Vista (1.00%)</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-600 mb-1">Cuota Mensual</label>
+                                    <input type="number" placeholder="₡0.00" class="w-full border-2 border-slate-100 rounded-xl p-3 focus:border-coope-cyan outline-none bg-slate-50">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-bold text-slate-600 mb-1">Abono Inicial</label>
+                                    <input type="number" placeholder="₡0.00" class="w-full border-2 border-slate-100 rounded-xl p-3 focus:border-coope-cyan outline-none bg-slate-50">
+                                </div>
+                            </div>
+                            
+                            <div class="bg-slate-50 rounded-2xl p-4 mt-6">
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-slate-500">Tasa de Interés</span>
+                                    <span class="font-bold text-coope-blue">8.00%</span>
+                                </div>
+                                <div class="flex justify-between text-lg">
+                                    <span class="font-bold">Total Proyectado</span>
+                                    <span class="font-extrabold text-coope-cyan">₡0.00</span>
+                                </div>
+                            </div>
+
+                            <button class="w-full bg-coope-cyan text-white font-bold py-4 rounded-2xl shadow-lg hover:shadow-cyan-200 transition-all hover:-translate-y-1">Gestionarlo en Coopecaja en Línea →</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sección de Detalles de Planes (GEO Content) -->
+    <section id="detalles" class="py-20 bg-white">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <div class="text-center mb-12">
+                <span class="text-coope-cyan font-bold tracking-widest uppercase text-sm">Explora tus opciones</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-coope-blue mt-2">Conocé nuestros planes de ahorro</h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6">
+                <!-- Ahorro Futuro -->
+                <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md" open>
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-coope-blue select-none hover:bg-slate-100 transition">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coope-blue text-white rounded-xl flex items-center justify-center mr-4 shadow-inner">
+                                <i class="fas fa-rocket text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="text-lg md:text-xl">Ahorro Futuro</span>
+                                <span class="block text-xs text-coope-cyan uppercase tracking-wider font-extrabold">Tasa Preferencial: 8.00%</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform text-coope-cyan text-xl"></i>
+                    </summary>
+                    <div class="px-6 pb-8 pt-4 text-slate-600 border-t border-slate-200/50 bg-white">
+                        <p class="mb-6 leading-relaxed">Es un sistema de ahorro a mediano plazo el cual te permite planificar un fondo económico para diferentes situaciones como vacaciones, marchamo, o para iniciar tu propio proyecto con una rentabilidad superior.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Plazo</span>
+                                <span class="font-extrabold text-coope-blue text-lg">5 años</span>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Cuota Mínima</span>
+                                <span class="font-extrabold text-coope-blue text-lg">₡7,000</span>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Tope Abono</span>
+                                <span class="font-extrabold text-coope-blue text-lg">₡2,000,000</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="#" class="inline-flex items-center bg-coope-blue text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:bg-blue-800 transition transform hover:-translate-y-1">
+                                <i class="fas fa-chart-line mr-3"></i> Iniciar Ahorro Futuro ahora
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Ahorro Marchamo -->
+                <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-coope-blue select-none hover:bg-slate-100 transition">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coope-cyan text-white rounded-xl flex items-center justify-center mr-4 shadow-inner">
+                                <i class="fas fa-car text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="text-lg md:text-xl">Ahorro Marchamo</span>
+                                <span class="block text-xs text-coope-cyan uppercase tracking-wider font-extrabold">Tasa: 5.50%</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform text-coope-cyan text-xl"></i>
+                    </summary>
+                    <div class="px-6 pb-8 pt-4 text-slate-600 border-t border-slate-200/50 bg-white">
+                        <p class="mb-6 leading-relaxed">Ajustás mes a mes el dinero para pagar tu derecho de circulación, reparar tu vehículo o contar con un ahorro preventivo para fin de año sin estrés financiero.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Entrega</span>
+                                <span class="font-extrabold text-coope-blue text-lg">Noviembre</span>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Cuota Mínima</span>
+                                <span class="font-extrabold text-coope-blue text-lg">₡3,000</span>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Tope Abono</span>
+                                <span class="font-extrabold text-coope-blue text-lg">₡1,000,000</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="#" class="inline-flex items-center bg-coope-cyan text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:opacity-90 transition transform hover:-translate-y-1">
+                                <i class="fas fa-car-side mr-3"></i> Asegurar mi Marchamo hoy
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Ahorro Navideño -->
+                <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-coope-blue select-none hover:bg-slate-100 transition">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-red-500 text-white rounded-xl flex items-center justify-center mr-4 shadow-inner">
+                                <i class="fas fa-gift text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="text-lg md:text-xl">Ahorro Navideño</span>
+                                <span class="block text-xs text-coope-cyan uppercase tracking-wider font-extrabold">Tasa: 5.50%</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform text-coope-cyan text-xl"></i>
+                    </summary>
+                    <div class="px-6 pb-8 pt-4 text-slate-600 border-t border-slate-200/50 bg-white">
+                        <p class="mb-6 leading-relaxed">La opción ideal para que hagás frente a los imprevistos y gastos extras de la época navideña, compras de regalos y celebraciones sin recurrir a deudas.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Entrega</span>
+                                <span class="font-extrabold text-coope-blue text-lg">3era sem. Noviembre</span>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Cuota Mínima</span>
+                                <span class="font-extrabold text-coope-blue text-lg">₡3,000</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="#" class="inline-flex items-center bg-red-500 text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:bg-red-600 transition transform hover:-translate-y-1">
+                                <i class="fas fa-star mr-3"></i> Planificar mi Navidad
+                            </a>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Ahorro Escolar -->
+                <details class="group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden transition-all duration-300 shadow-sm hover:shadow-md">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-coope-blue select-none hover:bg-slate-100 transition">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-coope-yellow text-white rounded-xl flex items-center justify-center mr-4 shadow-inner">
+                                <i class="fas fa-graduation-cap text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="text-lg md:text-xl">Ahorro Escolar</span>
+                                <span class="block text-xs text-coope-cyan uppercase tracking-wider font-extrabold">Tasa: 5.50%</span>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition-transform text-coope-cyan text-xl"></i>
+                    </summary>
+                    <div class="px-6 pb-8 pt-4 text-slate-600 border-t border-slate-200/50 bg-white">
+                        <p class="mb-6 leading-relaxed">Prepárate para la entrada a clases de tus hijos o el ingreso a la universidad. Cubre uniformes, libros y matrículas con un fondo garantizado.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Entrega</span>
+                                <span class="font-extrabold text-coope-blue text-lg">3era sem. Enero</span>
+                            </div>
+                            <div class="bg-slate-50 p-4 rounded-2xl border border-slate-100 text-center">
+                                <span class="block text-xs text-slate-400 font-bold uppercase mb-1">Cuota Mínima</span>
+                                <span class="font-extrabold text-coope-blue text-lg">₡3,000</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-center">
+                            <a href="#" class="inline-flex items-center bg-coope-yellow text-white px-8 py-4 rounded-2xl font-bold shadow-xl hover:opacity-90 transition transform hover:-translate-y-1">
+                                <i class="fas fa-book mr-3"></i> Solicitar Ahorro Escolar
+                            </a>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Comparativa Rápida (SEO Table) -->
+    <section id="planes" class="py-20 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-coope-blue">Resumen de Tasas y Beneficios</h2>
+            </div>
+
+            <div class="overflow-x-auto rounded-3xl shadow-xl border border-slate-100 bg-white">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-coope-blue text-white">
+                            <th class="p-6 font-bold">Plan</th>
+                            <th class="p-6 font-bold">Tasa Anual</th>
+                            <th class="p-6 font-bold">Cuota Mínima</th>
+                            <th class="p-6 font-bold">Tope Abono</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100">
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-6 font-bold">Ahorro Futuro</td>
+                            <td class="p-6 text-coope-blue font-extrabold">8.00%</td>
+                            <td class="p-6">₡7,000</td>
+                            <td class="p-6">₡2,000,000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-6 font-bold">Ahorro Marchamo</td>
+                            <td class="p-6 text-coope-blue font-extrabold">5.50%</td>
+                            <td class="p-6">₡3,000</td>
+                            <td class="p-6">₡1,000,000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-6 font-bold">Ahorro Navideño</td>
+                            <td class="p-6 text-coope-blue font-extrabold">5.50%</td>
+                            <td class="p-6">₡3,000</td>
+                            <td class="p-6">₡1,000,000</td>
+                        </tr>
+                        <tr class="hover:bg-slate-50 transition">
+                            <td class="p-6 font-bold text-slate-400 italic">Ahorro a la Vista</td>
+                            <td class="p-6 text-coope-blue font-extrabold">1.00%</td>
+                            <td class="p-6 text-slate-400">Sin mínimo</td>
+                            <td class="p-6">₡1,000,000</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white border-t border-slate-100">
+        <div class="container mx-auto px-4 max-w-4xl">
+            <h2 class="text-3xl font-extrabold text-coope-blue mb-10 text-center">Preguntas Frecuentes</h2>
+            
+            <div class="space-y-4">
+                <details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-coope-blue">
+                        ¿Cómo puedo aumentar o disminuir mi cuota de ahorro?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Debe completar el Formulario de Ahorros Programados y enviarlo escaneado al correo <b>captacion@coopecaja.fi.cr</b> junto con su cédula, o realizarlo directamente en Coopecaja Virtual.
+                    </div>
+                </details>
+
+                <details class="group bg-slate-50 rounded-2xl border border-slate-100 overflow-hidden">
+                    <summary class="flex justify-between items-center p-6 cursor-pointer font-bold text-coope-blue">
+                        ¿Cómo consulto mi saldo actual?
+                        <i class="fas fa-chevron-down group-open:rotate-180 transition"></i>
+                    </summary>
+                    <div class="px-6 pb-6 text-slate-600">
+                        Mediante la <b>App Coopecaja Móvil</b>, Coopecaja Virtual o llamando al 2542-1000 opción 0 con su clave de asociado.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-coope-blue text-white pt-16 pb-8">
+        <div class="container mx-auto px-4 text-center">
+            <img src="https://www.coopecaja.fi.cr/o/coopecaja-v1-0-theme/images/logo-white.png" alt="Coopecaja Logo" class="h-12 mx-auto mb-8">
+            <div class="flex justify-center space-x-6 mb-8 text-2xl">
+                <a href="#" class="hover:text-coope-cyan transition"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="hover:text-coope-cyan transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-coope-cyan transition"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p class="text-sm text-blue-200 italic">Coopecaja R.L. - Entidad supervisada por SUGEF.</p>
+            <p class="text-xs text-blue-300 mt-2">&copy; 2024 Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Botón Flotante Chat (UX) -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <button class="bg-coope-blue text-white w-14 h-14 rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition border-2 border-white group relative">
+            <i class="fas fa-comment-dots text-2xl"></i>
+            <span class="absolute right-16 bg-white text-coope-blue px-3 py-1 rounded-lg text-xs font-bold shadow-md opacity-0 group-hover:opacity-100 transition whitespace-nowrap">¿Necesitas ayuda?</span>
+        </button>
+    </div>
+
+</body>
+</html>
