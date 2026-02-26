@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte SEO - Guanacaste Airport</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary-blue: #004b8d;
+            --secondary-blue: #002f5d;
+            --accent-green: #8ec641;
+            --bg-light: #f4f7f9;
+            --text-dark: #333333;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .header-brand {
+            background-color: white;
+            border-bottom: 4px solid var(--accent-green);
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .table-header {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+
+        .metric-value {
+            color: var(--primary-blue);
+            font-weight: 700;
+        }
+
+        .highlight-green {
+            color: var(--accent-green);
+        }
+
+        .ctr-tag {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: bold;
+        }
+
+        .progress-bar {
+            height: 8px;
+            border-radius: 4px;
+            background-color: #e2e8f0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background-color: var(--accent-green);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-brand p-6 mb-8 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-4 mb-4 md:mb-0">
+                <div class="text-2xl font-bold flex flex-col">
+                    <span style="color: var(--primary-blue)">GUANACASTE</span>
+                    <span style="color: var(--secondary-blue); font-size: 0.9rem; letter-spacing: 2px;">AIRPORT</span>
+                </div>
+                <div class="h-10 w-px bg-gray-300 hidden md:block"></div>
+                <p class="text-sm text-gray-500 font-medium">Performance Report: Search Console</p>
+            </div>
+            <div class="text-right">
+                <p class="text-xs uppercase tracking-widest text-gray-400">Fecha de Extracción</p>
+                <p class="font-bold">26 de Febrero, 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 pb-12">
+        
+        <!-- Resumen de KPIs -->
+        <section class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+            <div class="card p-6 border-l-4 border-blue-600">
+                <p class="text-sm text-gray-500 uppercase font-bold">Total Clics</p>
+                <p class="text-3xl metric-value">10,249</p>
+                <p class="text-xs text-green-600 mt-2 font-semibold">▲ Tráfico Orgánico</p>
+            </div>
+            <div class="card p-6 border-l-4 border-green-500">
+                <p class="text-sm text-gray-500 uppercase font-bold">Impresiones Totales</p>
+                <p class="text-3xl metric-value">404,386</p>
+                <p class="text-xs text-gray-400 mt-2">Visibilidad en SERPs</p>
+            </div>
+            <div class="card p-6 border-l-4 border-yellow-500">
+                <p class="text-sm text-gray-500 uppercase font-bold">CTR Promedio (Top)</p>
+                <p class="text-3xl metric-value">2.5%</p>
+                <p class="text-xs text-gray-400 mt-2">Basado en consultas principales</p>
+            </div>
+            <div class="card p-6 border-l-4 border-purple-500">
+                <p class="text-sm text-gray-500 uppercase font-bold">Posición Media</p>
+                <p class="text-3xl metric-value">7.2</p>
+                <p class="text-xs text-green-600 mt-2 font-semibold font-bold">Top 5 Dominante</p>
+            </div>
+        </section>
+
+        <!-- Análisis de Consultas -->
+        <section class="mb-10">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold" style="color: var(--secondary-blue)">Top 15 Consultas por Rendimiento</h2>
+            </div>
+
+            <div class="card overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs">Consulta</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">Clics</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">Impresiones</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">CTR</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">Posición</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport</td>
+                            <td class="px-6 py-4 text-center font-bold">698</td>
+                            <td class="px-6 py-4 text-center text-gray-500">27,352</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">2.55%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">4.92</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors bg-blue-50/20">
+                            <td class="px-6 py-4 font-medium">guanacaste airport</td>
+                            <td class="px-6 py-4 text-center font-bold">437</td>
+                            <td class="px-6 py-4 text-center text-gray-500">5,421</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">8.06%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">3.45</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium text-orange-600 font-bold">liberia airport food ★</td>
+                            <td class="px-6 py-4 text-center font-bold">325</td>
+                            <td class="px-6 py-4 text-center text-gray-500">938</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag" style="background-color: #fff3e0; color: #ef6c00;">34.6%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">2.79</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">lir airport</td>
+                            <td class="px-6 py-4 text-center font-bold">286</td>
+                            <td class="px-6 py-4 text-center text-gray-500">46,575</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">0.61%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">5.07</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium italic">aeropuerto liberia</td>
+                            <td class="px-6 py-4 text-center font-bold">263</td>
+                            <td class="px-6 py-4 text-center text-gray-500">2,394</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">10.9%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">2.27</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport restaurants</td>
+                            <td class="px-6 py-4 text-center font-bold">214</td>
+                            <td class="px-6 py-4 text-center text-gray-500">625</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">34.2%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">2.67</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport costa rica</td>
+                            <td class="px-6 py-4 text-center font-bold">173</td>
+                            <td class="px-6 py-4 text-center text-gray-500">14,632</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">1.18%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">6.14</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium italic">aeropuerto daniel oduber</td>
+                            <td class="px-6 py-4 text-center font-bold">172</td>
+                            <td class="px-6 py-4 text-center text-gray-500">1,468</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">11.7%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">2.35</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia costa rica airport</td>
+                            <td class="px-6 py-4 text-center font-bold">140</td>
+                            <td class="px-6 py-4 text-center text-gray-500">14,277</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">0.98%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">5.45</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport arrivals</td>
+                            <td class="px-6 py-4 text-center font-bold">139</td>
+                            <td class="px-6 py-4 text-center text-gray-500">1,987</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">7.00%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">5.89</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium italic">aeropuerto de liberia</td>
+                            <td class="px-6 py-4 text-center font-bold">117</td>
+                            <td class="px-6 py-4 text-center text-gray-500">1,440</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">8.13%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">2.67</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport departures</td>
+                            <td class="px-6 py-4 text-center font-bold">116</td>
+                            <td class="px-6 py-4 text-center text-gray-500">1,135</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">10.2%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">6.75</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">aeropuerto guanacaste</td>
+                            <td class="px-6 py-4 text-center font-bold">99</td>
+                            <td class="px-6 py-4 text-center text-gray-500">563</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">17.6%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">3.55</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport food options</td>
+                            <td class="px-6 py-4 text-center font-bold">77</td>
+                            <td class="px-6 py-4 text-center text-gray-500">259</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">29.7%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">2.17</td>
+                        </tr>
+                        <tr class="hover:bg-blue-50 transition-colors">
+                            <td class="px-6 py-4 font-medium">liberia airport lounge</td>
+                            <td class="px-6 py-4 text-center font-bold">66</td>
+                            <td class="px-6 py-4 text-center text-gray-500">846</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">7.80%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">6.49</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Notas de Análisis -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card p-8">
+                <h3 class="text-xl font-bold mb-4" style="color: var(--primary-blue)">💡 Hallazgos Clave</h3>
+                <ul class="space-y-3 text-gray-600">
+                    <li class="flex items-start">
+                        <span class="mr-2 highlight-green">✔</span>
+                        <span><strong>Intención de Alimentación:</strong> Las búsquedas relacionadas con "food", "restaurants" y "food options" tienen un CTR extraordinariamente alto (>30%). Existe una oportunidad masiva para optimizar la sección de servicios comerciales.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 highlight-green">✔</span>
+                        <span><strong>Identidad de Marca:</strong> La transición de nombre a "Guanacaste Airport" está ganando tracción (437 clics), pero "Liberia Airport" sigue siendo el término de búsqueda líder (698 clics).</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="mr-2 highlight-green">✔</span>
+                        <span><strong>Volumen LIR:</strong> "lir airport" genera la mayor cantidad de impresiones (46,575) pero el CTR es bajo (0.61%). Esto sugiere que los usuarios buscan información rápida de vuelos sin necesariamente entrar al sitio.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="card p-8">
+                <h3 class="text-xl font-bold mb-4" style="color: var(--primary-blue)">🚀 Próximas Acciones</h3>
+                <div class="space-y-4">
+                    <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 shrink-0">1</div>
+                        <p class="text-sm">Optimizar la Landing Page de <strong>Restaurantes</strong> para capitalizar el alto CTR de consultas de comida.</p>
+                    </div>
+                    <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 shrink-0">2</div>
+                        <p class="text-sm">Implementar <strong>Marcado de Datos Estructurados (FAQ)</strong> para consultas informativas como "duty free" o "parking" para mejorar la visibilidad.</p>
+                    </div>
+                    <div class="flex items-center p-3 bg-blue-50 rounded-lg">
+                        <div class="bg-blue-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-4 shrink-0">3</div>
+                        <p class="text-sm">Reforzar el contenido en <strong>español</strong>; términos como "aeropuerto daniel oduber" tienen una posición muy sólida (2.35).</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!-- Sección de Páginas Principales -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold" style="color: var(--secondary-blue)">Páginas con Mejor Rendimiento</h2>
+            </div>
+
+            <div class="card overflow-hidden">
+                <table class="w-full text-left">
+                    <thead class="table-header">
+                        <tr>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs">Página de Aterrizaje (Landing Page)</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">Clics</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">Impresiones</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">CTR</th>
+                            <th class="px-6 py-4 font-semibold uppercase text-xs text-center">Posición</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <span class="text-blue-600 font-medium">/ (Home)</span>
+                                <p class="text-xs text-gray-400">Página de Inicio</p>
+                            </td>
+                            <td class="px-6 py-4 text-center font-bold">3,073</td>
+                            <td class="px-6 py-4 text-center text-gray-500">235,129</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">1.31%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">7.26</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <span class="text-blue-600 font-medium">/vuelos/estatus</span>
+                                <p class="text-xs text-gray-400">Estado de Vuelos</p>
+                            </td>
+                            <td class="px-6 py-4 text-center font-bold">2,399</td>
+                            <td class="px-6 py-4 text-center text-gray-500">98,756</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">2.43%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">6.21</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <span class="text-blue-600 font-medium">/llegadas</span>
+                                <p class="text-xs text-gray-400">Vuelos de Llegada</p>
+                            </td>
+                            <td class="px-6 py-4 text-center font-bold">1,586</td>
+                            <td class="px-6 py-4 text-center text-gray-500">77,453</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">2.05%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">7.01</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <span class="text-blue-600 font-medium">/salidas</span>
+                                <p class="text-xs text-gray-400">Vuelos de Salida</p>
+                            </td>
+                            <td class="px-6 py-4 text-center font-bold">706</td>
+                            <td class="px-6 py-4 text-center text-gray-500">22,098</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">3.19%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">7.52</td>
+                        </tr>
+                        <tr class="hover:bg-gray-50">
+                            <td class="px-6 py-4">
+                                <span class="text-blue-600 font-medium">/servicios/comida-compras</span>
+                                <p class="text-xs text-gray-400">Restaurantes y Retail</p>
+                            </td>
+                            <td class="px-6 py-4 text-center font-bold">355</td>
+                            <td class="px-6 py-4 text-center text-gray-500">3,626</td>
+                            <td class="px-6 py-4 text-center"><span class="ctr-tag">9.79%</span></td>
+                            <td class="px-6 py-4 text-center text-blue-800 font-bold">5.32</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Análisis de Distribución -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div class="card p-6">
+                <h3 class="text-lg font-bold mb-4" style="color: var(--secondary-blue)">Distribución de Clics por Sección</h3>
+                <div class="space-y-4">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Información de Vuelos (Estatus/Llegadas/Salidas)</span>
+                            <span class="font-bold">47.6%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 47.6%"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Página de Inicio (Branding)</span>
+                            <span class="font-bold">31.2%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 31.2%; background-color: #3b82f6;"></div></div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1">
+                            <span>Servicios y Amenidades (Comida/Lounge/Parking)</span>
+                            <span class="font-bold">12.5%</span>
+                        </div>
+                        <div class="progress-bar"><div class="progress-fill" style="width: 12.5%; background-color: #f59e0b;"></div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card p-6">
+                <h3 class="text-lg font-bold mb-4" style="color: var(--secondary-blue)">Eficiencia de Conversión SEO</h3>
+                <div class="bg-gray-50 p-4 rounded-lg border border-gray-200">
+                    <p class="text-sm text-gray-600 leading-relaxed">
+                        La página de <strong>Servicios</strong> (/servicios/comida-compras) es la más eficiente del sitio: aunque tiene menos impresiones que la Home, su <strong>CTR del 9.79%</strong> indica una relevancia máxima para el usuario. 
+                        <br><br>
+                        Por el contrario, la sección de <strong>Salidas</strong> tiene un CTR mayor que <strong>Llegadas</strong> (3.19% vs 2.05%), sugiriendo que los pasajeros que salen interactúan más con el contenido preventivo del sitio.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+     <!-- Nueva Sección: Geografía del Tráfico -->
+        <section class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+            <div class="lg:col-span-2 card overflow-hidden">
+                <div class="p-6 border-b border-gray-100 flex justify-between items-center">
+                    <h3 class="text-lg font-bold" style="color: var(--secondary-blue)">Distribución por Países (Top 10)</h3>
+                </div>
+                <table class="w-full text-left">
+                    <thead class="bg-gray-50 text-gray-400">
+                        <tr>
+                            <th class="px-6 py-3 text-xs uppercase font-bold">País</th>
+                            <th class="px-6 py-3 text-xs uppercase font-bold text-center">Clics</th>
+                            <th class="px-6 py-3 text-xs uppercase font-bold text-center">Impresiones</th>
+                            <th class="px-6 py-3 text-xs uppercase font-bold text-center">CTR</th>
+                            <th class="px-6 py-3 text-xs uppercase font-bold text-center">Posición</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100">
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-blue-900">Costa Rica</td>
+                            <td class="px-6 py-4 text-center font-bold">7,611</td>
+                            <td class="px-6 py-4 text-center text-gray-500">143,361</td>
+                            <td class="px-6 py-4 text-center font-bold text-green-600">5.31%</td>
+                            <td class="px-6 py-4 text-center font-bold">5.93</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-blue-900">Estados Unidos</td>
+                            <td class="px-6 py-4 text-center font-bold">1,290</td>
+                            <td class="px-6 py-4 text-center text-gray-500 font-bold">155,231</td>
+                            <td class="px-6 py-4 text-center">0.83%</td>
+                            <td class="px-6 py-4 text-center">7.48</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-blue-900">Canadá</td>
+                            <td class="px-6 py-4 text-center font-bold">657</td>
+                            <td class="px-6 py-4 text-center text-gray-500">51,985</td>
+                            <td class="px-6 py-4 text-center">1.26%</td>
+                            <td class="px-6 py-4 text-center text-blue-700">6.58</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-blue-900">México</td>
+                            <td class="px-6 py-4 text-center">99</td>
+                            <td class="px-6 py-4 text-center text-gray-500">4,847</td>
+                            <td class="px-6 py-4 text-center">2.04%</td>
+                            <td class="px-6 py-4 text-center text-blue-700">7.34</td>
+                        </tr>
+                        <tr>
+                            <td class="px-6 py-4 font-semibold text-blue-900">Nicaragua</td>
+                            <td class="px-6 py-4 text-center">77</td>
+                            <td class="px-6 py-4 text-center text-gray-500">2,207</td>
+                            <td class="px-6 py-4 text-center">3.49%</td>
+                            <td class="px-6 py-4 text-center">6.27</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Insights Geográficos -->
+            <div class="card p-6 bg-white flex flex-col justify-center">
+                <h3 class="text-lg font-bold mb-6" style="color: var(--secondary-blue)">💡 Análisis Geográfico</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-bold text-gray-700 italic">Métrica Estrella: Reconocimiento en EE.UU.</span>
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            <strong>Estados Unidos</strong> es el país con más impresiones totales (**155k**), superando incluso a Costa Rica. Esto indica que el aeropuerto es altamente visible para el turista norteamericano en fase de exploración.
+                        </p>
+                    </div>
+                    <div class="pt-4 border-t border-gray-100">
+                        <div class="flex justify-between items-center mb-2">
+                            <span class="text-sm font-bold text-gray-700 italic">Oportunidad: Nicaragua & México</span>
+                        </div>
+                        <p class="text-sm text-gray-600">
+                            Presentan un CTR superior al **2%** y **3%** respectivamente. Hay una intención de viaje regional fuerte que podría capitalizarse con campañas específicas de conectividad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hallazgos Cruciales Finales -->
+        <section class="mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8 border-t-4" style="border-top-color: var(--primary-blue)">
+                    <h4 class="font-bold text-lg mb-4">Análisis de Intención</h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        El tráfico de **Costa Rica** es principalmente utilitario (Estado de vuelos, horarios). El tráfico de **EE.UU. y Canadá** es aspiracional e informativo. 
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <p class="text-xs font-bold text-blue-800 uppercase mb-1">Recomendación:</p>
+                        <p class="text-sm text-blue-900">Traducir y adaptar las guías de "Servicios" y "Transporte" con un enfoque más turístico para elevar el CTR internacional.</p>
+                    </div>
+                </div>
+                <div class="card p-8 border-t-4" style="border-top-color: var(--accent-green)">
+                    <h4 class="font-bold text-lg mb-4">Visibilidad de Marca LIR</h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        A pesar de la posición media de 7.48 en EE.UU., la cantidad de impresiones sugiere que el sitio ya aparece en búsquedas genéricas de viajes a Costa Rica.
+                    </p>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-xs font-bold text-green-800 uppercase mb-1">Acción SEO:</p>
+                        <p class="text-sm text-green-900">Mejorar los *meta-titles* para incluir términos como "Closest Airport to Tamarindo/Papagayo" para capturar clics de turistas en EE.UU.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rendimiento por Dispositivo -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-2xl font-bold" style="color: var(--secondary-blue)">Rendimiento por Dispositivo</h2>
+                <span class="text-sm bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-medium italic">Mobile First Priority</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Móviles -->
+                <div class="card p-6 border border-blue-100">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="device-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase text-gray-400">Móviles</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">Clics:</span>
+                            <span class="font-bold">7,478</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">CTR:</span>
+                            <span class="font-bold text-green-600">3.02%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">Posición:</span>
+                            <span class="font-bold">6.37</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ordenador -->
+                <div class="card p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="device-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase text-gray-400">Ordenador</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">Clics:</span>
+                            <span class="font-bold">2,602</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">CTR:</span>
+                            <span class="font-bold">1.72%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">Posición:</span>
+                            <span class="font-bold">8.54</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tablet -->
+                <div class="card p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="device-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                        </div>
+                        <span class="text-xs font-bold uppercase text-gray-400">Tablet</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">Clics:</span>
+                            <span class="font-bold">169</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">CTR:</span>
+                            <span class="font-bold text-green-600">3.16%</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-gray-600">Posición:</span>
+                            <span class="font-bold">6.65</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusiones Estratégicas Finales -->
+        <section class="mb-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-8 border-t-4" style="border-top-color: var(--primary-blue)">
+                    <h4 class="font-bold text-lg mb-4">📱 Enfoque Mobile-First</h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Con un **73% de clics** provenientes de móviles y un CTR del **3.02%**, la interfaz móvil es el punto de contacto más crítico. 
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <p class="text-xs font-bold text-blue-800 uppercase mb-1">Recomendación Core:</p>
+                        <p class="text-sm text-blue-900">Asegurar que el botón de "Estatus de Vuelo" sea el elemento más accesible en la vista móvil (zona de pulgar).</p>
+                    </div>
+                </div>
+                <div class="card p-8 border-t-4" style="border-top-color: var(--accent-green)">
+                    <h4 class="font-bold text-lg mb-4">🌍 Disparidad de CTR</h4>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Las Tablets, aunque tienen poco volumen, presentan el CTR más alto (**3.16%**). Esto suele indicar un perfil de usuario planificador (en hotel o casa) que busca detalles específicos.
+                    </p>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <p class="text-xs font-bold text-green-800 uppercase mb-1">Acción Táctica:</p>
+                        <p class="text-sm text-green-900">Mejorar la visibilidad de los mapas del aeropuerto y guías de transporte para este segmento de "planificadores".</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 text-gray-400 text-sm border-t border-gray-200 mt-12">
+        &copy; 2026 Guanacaste Airport (LIR) - Reporte de Inteligencia Orgánica. Powered by Vinci Airports.
+    </footer>
+
+</body>
+</html>
