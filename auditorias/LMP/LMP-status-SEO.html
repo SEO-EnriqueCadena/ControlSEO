@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio Médico Polanco — SEO Dashboard</title>
+    <style>
+        :root {
+            /* Fallbacks por si se visualiza fuera del entorno de variables de Canvas */
+            --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            --color-background-primary: #ffffff;
+            --color-background-secondary: #f9fafb;
+            --color-border-tertiary: #e5e7eb;
+            --color-text-primary: #111827;
+            --color-text-secondary: #4b5563;
+            --color-text-tertiary: #9ca3af;
+            --color-background-danger: #fef2f2;
+            --color-text-danger: #b91c1c;
+            --color-background-warning: #fffbeb;
+            --color-text-warning: #b45309;
+            --color-background-success: #ecfdf5;
+            --color-text-success: #047857;
+            --color-background-info: #eff6ff;
+            --color-text-info: #1d4ed8;
+            --border-radius-md: 8px;
+            --border-radius-lg: 12px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-background-primary);
+            color: var(--color-text-primary);
+            line-height: 1.5;
+        }
+
+        .db {
+            padding: 1rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* HEADER RESPONSIVO */
+        .header-wrap {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            padding-bottom: 12px;
+            border-bottom: 0.5px solid var(--color-border-tertiary);
+            margin-bottom: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .header-wrap {
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+
+        .sec-hdr {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: var(--color-background-secondary);
+            border-radius: var(--border-radius-md);
+            margin: 1.5rem 0 1rem;
+            border-left: 3px solid;
+        }
+
+        .sec-hdr-txt {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--color-text-primary);
+        }
+
+        .sec-hdr-sub {
+            font-size: 10px;
+            color: var(--color-text-secondary);
+            margin-top: 1px;
+        }
+
+        .sec-num {
+            font-size: 18px;
+            font-weight: 600;
+            min-width: 28px;
+            text-align: center;
+        }
+
+        /* SISTEMA DE GRIDS RESPONSIVOS */
+        .g-grid {
+            display: grid;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Grid 5 columnas (KPIs superiores) */
+        .g5 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 640px) { .g5 { grid-template-columns: repeat(3, 1fr); } }
+        @media (min-width: 1024px) { .g5 { grid-template-columns: repeat(5, 1fr); } }
+
+        /* Grid 4 columnas */
+        .g4 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 1024px) { .g4 { grid-template-columns: repeat(4, 1fr); } }
+
+        /* Grid 3 columnas */
+        .g3 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 768px) { .g3 { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .g3 { grid-template-columns: repeat(3, 1fr); } }
+
+        /* Grid 2 columnas iguales */
+        .g2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 1024px) { .g2 { grid-template-columns: 1fr 1fr; } }
+
+        /* Grids mixtos (3:2, 2:3) */
+        .g32, .g23 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-bottom: 1rem;
+        }
+        @media (min-width: 1024px) {
+            .g32 { grid-template-columns: 3fr 2fr; }
+            .g23 { grid-template-columns: 2fr 3fr; }
+        }
+
+        /* KPI CARD */
+        .kpi {
+            background: var(--color-background-secondary);
+            border-radius: var(--border-radius-md);
+            padding: 12px;
+            height: 100%;
+        }
+
+        .kpi-l {
+            font-size: 10px;
+            color: var(--color-text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: .05em;
+            margin-bottom: 4px;
+        }
+
+        .kpi-v {
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 1.1;
+        }
+
+        .kpi-s {
+            font-size: 9px;
+            color: var(--color-text-tertiary);
+            margin-top: 4px;
+        }
+
+        /* PANEL */
+        .panel {
+            background: var(--color-background-primary);
+            border: 0.5px solid var(--color-border-tertiary);
+            border-radius: var(--border-radius-lg);
+            padding: 16px;
+            height: fit-content;
+        }
+
+        .pt {
+            font-size: 10px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            margin-bottom: 12px;
+        }
+
+        /* LISTAS */
+        .li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 8px 0;
+            border-bottom: 0.5px solid var(--color-border-tertiary);
+        }
+
+        .li:last-child { border-bottom: none; }
+
+        .li-n {
+            font-size: 11px;
+            color: var(--color-text-primary);
+            flex: 1;
+            min-width: 0;
+            line-height: 1.4;
+        }
+
+        .li-s {
+            font-size: 9px;
+            color: var(--color-text-tertiary);
+            margin-top: 2px;
+        }
+
+        /* ELEMENTOS UI */
+        .pill {
+            font-size: 9px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 10px;
+            flex-shrink: 0;
+            white-space: nowrap;
+        }
+
+        .p-r { background: var(--color-background-danger); color: var(--color-text-danger); }
+        .p-a { background: var(--color-background-warning); color: var(--color-text-warning); }
+        .p-g { background: var(--color-background-success); color: var(--color-text-success); }
+        .p-b { background: var(--color-background-info); color: var(--color-text-info); }
+        .p-gr { background: var(--color-background-secondary); color: var(--color-text-secondary); }
+
+        .ins {
+            padding: 10px 14px;
+            border-left: 3px solid;
+            border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0;
+            margin-bottom: 8px;
+            background: var(--color-background-secondary);
+        }
+
+        .sc-wrap {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        .sc-c {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sc-v { font-size: 15px; font-weight: 600; }
+        .sc-d { flex: 1; }
+        .sc-lbl { font-size: 11px; font-weight: 600; color: var(--color-text-primary); }
+        .sc-bar { height: 6px; background: var(--color-border-tertiary); border-radius: 3px; margin-top: 4px; }
+        .sc-fill { height: 100%; border-radius: 3px; }
+
+        .divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 2rem 0; }
+
+        .leg {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 12px;
+        }
+
+        .leg-i {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 10px;
+            color: var(--color-text-secondary);
+        }
+
+        .leg-sq { width: 10px; height: 10px; border-radius: 2px; flex-shrink: 0; }
+
+        /* TABLA RESPONSIVA */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .rd-tbl {
+            width: 100%;
+            min-width: 600px; /* Asegura legibilidad en scroll horizontal */
+            border-collapse: collapse;
+            font-size: 11px;
+        }
+
+        .rd-tbl th {
+            text-align: left;
+            padding: 10px 8px;
+            font-size: 9px;
+            font-weight: 600;
+            color: var(--color-text-secondary);
+            border-bottom: 0.5px solid var(--color-border-tertiary);
+            text-transform: uppercase;
+            letter-spacing: .05em;
+        }
+
+        .rd-tbl td {
+            padding: 10px 8px;
+            color: var(--color-text-primary);
+            border-bottom: 0.5px solid var(--color-border-tertiary);
+            vertical-align: middle;
+        }
+
+        .kpi-bar { height: 4px; border-radius: 2px; margin-top: 6px; background: var(--color-border-tertiary); }
+        .kpi-bar-fill { height: 100%; border-radius: 2px; }
+
+        canvas {
+            max-width: 100% !important;
+        }
+    </style>
+</head>
+<body>
+
+<div class="db">
+
+    <!-- HEADER -->
+    <div class="header-wrap">
+        <div>
+            <h1 style="font-size: 1.25rem; font-weight: 600; color: var(--color-text-primary);">Laboratorio Médico Polanco — SEO Status Dashboard</h1>
+            <p style="font-size: 11px; color: var(--color-text-secondary); margin-top: 4px;">Google Search Console + GA4 + Auditoría Técnica · Sep 2025 – Mar 2026 · 183 días</p>
+        </div>
+        <div style="display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-start;">
+            <span class="pill p-r">CTR 1.2% — bajo</span>
+            <span class="pill p-a">Mobile 56/100</span>
+            <span class="pill p-r">TTFB 900ms</span>
+            <span class="pill p-g">Brand CTR 41%</span>
+        </div>
+    </div>
+
+    <!-- KPIs PRINCIPALES -->
+    <div class="g5">
+        <div class="kpi"><div class="kpi-l">Impresiones/mes</div><div class="kpi-v" style="color:#378ADD;">50M+</div><div class="kpi-s">51M en los 6 meses</div></div>
+        <div class="kpi"><div class="kpi-l">CTR promedio</div><div class="kpi-v" style="color:#E24B4A;">1.2%</div><div class="kpi-s">pico: 3.2% en sept</div></div>
+        <div class="kpi"><div class="kpi-l">Posición prom.</div><div class="kpi-v" style="color:#EF9F27;">6.8</div><div class="kpi-s">mejora en marzo</div></div>
+        <div class="kpi"><div class="kpi-l">Usuarios GA4</div><div class="kpi-v" style="color:var(--color-text-primary);">1.81M</div><div class="kpi-s">2.72M sesiones</div></div>
+        <div class="kpi"><div class="kpi-l">Ev. clave Organic</div><div class="kpi-v" style="color:#1D9E75;">73%</div><div class="kpi-s">mejor canal del sitio</div></div>
+    </div>
+
+    <!-- SECCIÓN 1: PÁGINAS -->
+    <div class="sec-hdr" style="border-left-color:#378ADD;">
+        <span class="sec-num" style="color:#378ADD;">1</span>
+        <div><div class="sec-hdr-txt">Páginas — visibilidad y CTR</div><div class="sec-hdr-sub">788 URLs HTML · top páginas por clics e impresiones</div></div>
+    </div>
+
+    <div class="g32">
+        <div class="panel">
+            <div class="pt">Top páginas por clics — color = CTR</div>
+            <div style="position:relative; width:100%; height:340px;"><canvas id="cTopPags"></canvas></div>
+            <div class="leg">
+                <span class="leg-i"><span class="leg-sq" style="background:#1D9E75;"></span>CTR &gt;2%</span>
+                <span class="leg-i"><span class="leg-sq" style="background:#378ADD;"></span>CTR 1.5–2%</span>
+                <span class="leg-i"><span class="leg-sq" style="background:#EF9F27;"></span>CTR 0.8–1.5%</span>
+                <span class="leg-i"><span class="leg-sq" style="background:#E24B4A;"></span>CTR &lt;0.8%</span>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+            <div class="panel">
+                <div class="pt">Distribución por categoría (clics est.)</div>
+                <div style="position:relative; width:100%; height:170px;"><canvas id="cCatPie"></canvas></div>
+                <div class="leg" id="catLeg"></div>
+            </div>
+            <div class="panel">
+                <div class="pt">Páginas críticas — alto volumen, CTR bajo</div>
+                <div class="li"><span class="li-n">/estudios (categoría)<div class="li-s">1.7M imp · pos 17.1</div></span><span style="font-weight:600; font-size:11px; color:#E24B4A;">1.60%</span><span class="pill p-r">crítico</span></div>
+                <div class="li"><span class="li-n">Biometría hemática<div class="li-s">995K imp · pos 6.4</div></span><span style="font-weight:600; font-size:11px; color:#E24B4A;">0.25%</span><span class="pill p-r">crítico</span></div>
+                <div class="li"><span class="li-n">Saludmujer landing<div class="li-s">369K imp · pos 7.3</div></span><span style="font-weight:600; font-size:11px; color:#E24B4A;">0.09%</span><span class="pill p-r">crítico</span></div>
+                <div class="li"><span class="li-n">Promociones<div class="li-s">795K imp · pos 4.3</div></span><span style="font-weight:600; font-size:11px; color:#EF9F27;">0.49%</span><span class="pill p-a">mejorar</span></div>
+                <div class="li"><span class="li-n">Consulta resultados ✓<div class="li-s">488K imp · pos 2.2</div></span><span style="font-weight:600; font-size:11px; color:#1D9E75;">5.70%</span><span class="pill p-g">modelo</span></div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECCIÓN 2: CONSULTAS -->
+    <div class="sec-hdr" style="border-left-color:#7F77DD;">
+        <span class="sec-num" style="color:#7F77DD;">2</span>
+        <div><div class="sec-hdr-txt">Consultas — keywords e intención</div><div class="sec-hdr-sub">~1,500 queries · brand vs non-brand · intent map</div></div>
+    </div>
+
+    <div class="g4">
+        <div class="kpi"><div class="kpi-l">Clics brand</div><div class="kpi-v" style="color:#1D9E75;">~165K</div><div class="kpi-s">CTR brand avg 41.6%</div></div>
+        <div class="kpi"><div class="kpi-l">Clics non-brand</div><div class="kpi-v" style="color:#378ADD;">~125K</div><div class="kpi-s">CTR non-brand 1.1%</div></div>
+        <div class="kpi"><div class="kpi-l">Queries con precio</div><div class="kpi-v" style="color:#EF9F27;">80+</div><div class="kpi-s">intent transaccional</div></div>
+        <div class="kpi"><div class="kpi-l">Imp. vs competidores</div><div class="kpi-v" style="color:#E24B4A;">200K+</div><div class="kpi-s">Chopo + Salud Digna</div></div>
+    </div>
+
+    <div class="g2">
+        <div class="panel">
+            <div class="pt">Top non-brand por impresiones — oportunidades</div>
+            <div style="position:relative; width:100%; height:280px;"><canvas id="cNBchart"></canvas></div>
+            <div class="leg">
+                <span class="leg-i"><span class="leg-sq" style="background:#E24B4A;"></span>CTR &lt;0.3%</span>
+                <span class="leg-i"><span class="leg-sq" style="background:#EF9F27;"></span>CTR 0.3–1%</span>
+                <span class="leg-i"><span class="leg-sq" style="background:#1D9E75;"></span>CTR &gt;1%</span>
+            </div>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:12px;">
+            <div class="panel">
+                <div class="pt">Intención de búsqueda — distribución %</div>
+                <div style="position:relative; width:100%; height:150px;"><canvas id="cIntent"></canvas></div>
+                <div class="leg" id="intentLeg"></div>
+            </div>
+            <div class="panel">
+                <div class="pt">Queries transaccionales — precio/costo</div>
+                <div class="li"><span class="li-n">endoscopia precio</span><span class="li-s" style="margin-left:auto;">62K imp</span><span style="font-weight:600; font-size:11px; color:#EF9F27; margin-left:6px;">1.24%</span></div>
+                <div class="li"><span class="li-n">colonoscopia precio</span><span class="li-s" style="margin-left:auto;">47K imp</span><span style="font-weight:600; font-size:11px; color:#EF9F27; margin-left:6px;">1.57%</span></div>
+                <div class="li"><span class="li-n">resonancia magnética costo</span><span class="li-s" style="margin-left:auto;">43K imp</span><span style="font-weight:600; font-size:11px; color:#1D9E75; margin-left:6px;">1.77%</span></div>
+                <div class="li"><span class="li-n">perfil tiroideo precio</span><span class="li-s" style="margin-left:auto;">31K imp</span><span style="font-weight:600; font-size:11px; color:#E24B4A; margin-left:6px;">0.48%</span></div>
+                <div class="li"><span class="li-n">electroencefalograma precio</span><span class="li-s" style="margin-left:auto;">27K imp</span><span style="font-weight:600; font-size:11px; color:#1D9E75; margin-left:6px;">1.69%</span></div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECCIÓN 3: EVOLUCIÓN -->
+    <div class="sec-hdr" style="border-left-color:#EF9F27;">
+        <span class="sec-num" style="color:#EF9F27;">3</span>
+        <div><div class="sec-hdr-txt">Evolución temporal, geografía y dispositivos</div><div class="sec-hdr-sub">183 días · México 98.3% · móvil 72%</div></div>
+    </div>
+
+    <div class="panel" style="margin-bottom:12px;">
+        <div class="pt">Clics diarios — 4 fases del período</div>
+        <div class="leg" style="margin-bottom:12px;">
+            <span class="leg-i"><span style="display:inline-block; width:10px; height:3px; background:#1D9E75; border-radius:1px;"></span>Fase 1: Pico (Sep–Nov)</span>
+            <span class="leg-i"><span style="display:inline-block; width:10px; height:3px; background:#E24B4A; border-radius:1px;"></span>Fase 2: Caída Core Update</span>
+            <span class="leg-i"><span style="display:inline-block; width:10px; height:3px; background:#378ADD; border-radius:1px;"></span>Fase 3: Recuperación</span>
+            <span class="leg-i"><span style="display:inline-block; width:10px; height:3px; background:#EF9F27; border-radius:1px;"></span>Fase 4: Equilibrio</span>
+        </div>
+        <div style="position:relative; width:100%; height:200px;"><canvas id="cTimeline"></canvas></div>
+    </div>
+
+    <div class="g3">
+        <div class="panel">
+            <div class="pt">CTR y posición — tendencia semanal</div>
+            <div style="position:relative; width:100%; height:170px;"><canvas id="cCtrPos"></canvas></div>
+        </div>
+        <div class="panel">
+            <div class="pt">Dispositivos — clics y CTR</div>
+            <div style="position:relative; width:100%; height:130px;"><canvas id="cDevPie"></canvas></div>
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:4px; margin-top:10px; text-align:center;">
+                <div><div style="font-size:9px; color:var(--color-text-tertiary);">Móvil CTR</div><div style="font-size:14px; font-weight:600; color:#EF9F27;">1.62%</div></div>
+                <div><div style="font-size:9px; color:var(--color-text-tertiary);">Desktop CTR</div><div style="font-size:14px; font-weight:600; color:#1D9E75;">2.82%</div></div>
+                <div><div style="font-size:9px; color:var(--color-text-tertiary);">Brecha</div><div style="font-size:14px; font-weight:600; color:#E24B4A;">+74%</div></div>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="pt">Patrón semanal — clics promedio</div>
+            <div style="position:relative; width:100%; height:130px;"><canvas id="cWeekday"></canvas></div>
+            <div style="font-size:9px; color:var(--color-text-tertiary); margin-top:6px;">Caída fin de semana −45%. Publicar lun–mié para capturar el pico.</div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECCIÓN 4: CANALES GA4 -->
+    <div class="sec-hdr" style="border-left-color:#1D9E75;">
+        <span class="sec-num" style="color:#1D9E75;">4</span>
+        <div><div class="sec-hdr-txt">Canales de adquisición — GA4</div><div class="sec-hdr-sub">1.81M usuarios · 2.72M sesiones · 16.1M eventos</div></div>
+    </div>
+
+    <div class="g4">
+        <div class="kpi"><div class="kpi-l">Tráfico pagado</div><div class="kpi-v" style="color:#E24B4A;">~65%</div><div class="kpi-s">Paid Search + otros</div></div>
+        <div class="kpi"><div class="kpi-l">Tráfico orgánico</div><div class="kpi-v" style="color:#1D9E75;">20%</div><div class="kpi-s">subinvertido vs paid</div></div>
+        <div class="kpi"><div class="kpi-l">Rebote Paid Social</div><div class="kpi-v" style="color:#E24B4A;">97.3%</div><div class="kpi-s">detener inmediatamente</div></div>
+        <div class="kpi"><div class="kpi-l">Ev. clave Direct</div><div class="kpi-v" style="color:#1D9E75;">67.8%</div><div class="kpi-s">4.5 vistas/sesión</div></div>
+    </div>
+
+    <div class="g2">
+        <div class="panel">
+            <div class="pt">Calidad de canal — tasa de evento clave</div>
+            <div style="position:relative; width:100%; height:200px;"><canvas id="cChanConv"></canvas></div>
+        </div>
+        <div class="panel">
+            <div class="pt">Diagnóstico por canal</div>
+            <div class="li">
+                <span class="li-n">Organic Search — 367K usuarios<div class="li-s">28% rebote · 73.1% ev. clave · mejor canal</div></span>
+                <span class="pill p-g">óptimo</span>
+            </div>
+            <div class="li">
+                <span class="li-n">Paid Search — 613K usuarios<div class="li-s">52% rebote · 44.6% ev. clave</div></span>
+                <span class="pill p-a">medio</span>
+            </div>
+            <div class="li">
+                <span class="li-n">Cross-network — 340K usuarios<div class="li-s">6.85% rebote — auditar medición</div></span>
+                <span class="pill p-a">auditar</span>
+            </div>
+            <div class="li">
+                <span class="li-n">Paid Social — 40K usuarios<div class="li-s">97.3% rebote · 1.67% ev. clave</div></span>
+                <span class="pill p-r">pausar</span>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECCIÓN 5: AUDITORÍA -->
+    <div class="sec-hdr" style="border-left-color:#E24B4A;">
+        <span class="sec-num" style="color:#E24B4A;">5</span>
+        <div><div class="sec-hdr-txt">Auditoría técnica — Lighthouse + Screaming Frog</div><div class="sec-hdr-sub">30 Ene 2026 · Rev. 26 Mar 2026 · 2,393 URLs</div></div>
+    </div>
+
+    <div class="g2">
+        <div class="panel">
+            <div class="pt">Scores Lighthouse actuales vs meta</div>
+            <div class="sc-wrap">
+                <div class="sc-c" style="background:#FCF3CF;"><span class="sc-v" style="color:#D68910;">56</span></div>
+                <div class="sc-d">
+                    <div class="sc-lbl">Performance Mobile</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:56%; background:#EF9F27;"></div></div>
+                </div>
+            </div>
+            <div class="sc-wrap">
+                <div class="sc-c" style="background:#FCF3CF;"><span class="sc-v" style="color:#D68910;">57</span></div>
+                <div class="sc-d">
+                    <div class="sc-lbl">Performance Desktop</div>
+                    <div class="sc-bar"><div class="sc-fill" style="width:57%; background:#EF9F27;"></div></div>
+                </div>
+            </div>
+            <div style="position:relative; width:100%; height:160px; margin-top:10px;"><canvas id="cRadar"></canvas></div>
+        </div>
+        <div class="panel">
+            <div class="pt">Hallazgos críticos</div>
+            <div class="li"><div style="flex:1"><div style="font-size:11px; font-weight:600;">TTFB servidor 900ms</div><div class="li-s">Meta &lt;200ms. Afecta LCP y ranking.</div></div><span class="pill p-r">crítico</span></div>
+            <div class="li"><div style="flex:1"><div style="font-size:11px; font-weight:600;">277 meta títulos &gt;60 chars</div><div class="li-s">35% de URLs truncadas en Google.</div></div><span class="pill p-r">alta</span></div>
+            <div class="li"><div style="flex:1"><div style="font-size:11px; font-weight:600;">189 errores 5XX (timeout)</div><div class="li-s">Reduce crawl budget y bloquea indexación.</div></div><span class="pill p-r">alta</span></div>
+            <div class="li"><div style="flex:1"><div style="font-size:11px; font-weight:600;">0 microformatos / schema</div><div class="li-s">17.9M impresiones sin rich snippets.</div></div><span class="pill p-a">media</span></div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SECCIÓN 6: HOJA DE RUTA -->
+    <div class="sec-hdr" style="border-left-color:#154360;">
+        <span class="sec-num" style="color:#154360;">6</span>
+        <div><div class="sec-hdr-txt">Hoja de ruta integrada — 4 fases · 32 acciones</div><div class="sec-hdr-sub">Upside estimado +245–400K clics/mes</div></div>
+    </div>
+
+    <div class="g4">
+        <div class="kpi" style="border-left:3px solid #E24B4A;"><div class="kpi-l">Fase 0 — técnico</div><div class="kpi-v" style="color:#E24B4A;">Sem 1–2</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:15%; background:#E24B4A;"></div></div></div>
+        <div class="kpi" style="border-left:3px solid #EF9F27;"><div class="kpi-l">Fase 1 — snippets</div><div class="kpi-v" style="color:#EF9F27;">Sem 3–6</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:35%; background:#EF9F27;"></div></div></div>
+        <div class="kpi" style="border-left:3px solid #378ADD;"><div class="kpi-l">Fase 2 — fundamentos</div><div class="kpi-v" style="color:#378ADD;">Sem 7–14</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:65%; background:#378ADD;"></div></div></div>
+        <div class="kpi" style="border-left:3px solid #1D9E75;"><div class="kpi-l">Fase 3 — crecimiento</div><div class="kpi-v" style="color:#1D9E75;">Sem 15–26</div><div class="kpi-bar"><div class="kpi-bar-fill" style="width:100%; background:#1D9E75;"></div></div></div>
+    </div>
+
+    <div class="panel" style="margin-bottom:1rem;">
+        <div class="pt">Backlog de acciones — todas las fases</div>
+        <div class="table-container">
+            <table class="rd-tbl">
+                <thead><tr><th style="width:40px;">Fase</th><th>Acción</th><th style="width:80px; text-align:center;">Impacto</th><th style="width:80px; text-align:center;">Esfuerzo</th><th>Resp.</th><th style="text-align:center;">Upside</th></tr></thead>
+                <tbody id="rdBody"></tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="panel">
+        <div class="pt">KPIs — baseline vs metas proyectadas</div>
+        <div style="position:relative; width:100%; height:240px;"><canvas id="cKpis"></canvas></div>
+    </div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+    /* DATOS ORIGINALES PRESERVADOS */
+    const tp=[{l:'Inicio',c:151239,r:5.46},{l:'Consulta resultados',c:27828,r:5.70},{l:'Estudios (cat.)',c:27248,r:1.60},{l:'Sucursales',c:24627,r:2.79},{l:'Contacto',c:11078,r:1.14},{l:'Check-up sexual',c:8422,r:2.77},{l:'InBody',c:6379,r:2.97},{l:'Endoscopía',c:4177,r:1.32},{l:'Promociones',c:3913,r:0.49},{l:'Ecocardiograma',c:3623,r:1.59},{l:'TC abdomen',c:3507,r:1.07},{l:'Perfil tiroideo',c:3424,r:0.71},{l:'PET-CT',c:3153,r:2.16},{l:'Influenza',c:2977,r:0.92},{l:'Colonoscopía',c:2935,r:1.47}];
+    new Chart(document.getElementById('cTopPags'),{type:'bar',data:{labels:tp.map(d=>d.l),datasets:[{data:tp.map(d=>d.c),backgroundColor:tp.map(d=>d.r>=2?'#1D9E75':d.r>=1.5?'#378ADD':d.r>=0.8?'#EF9F27':'#E24B4A'),borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:8}},grid:{color:'#f1f1f1'}},y:{ticks:{font:{size:9}}}}}});
+
+    const cats=[{n:'Core',v:215000,col:'#7F77DD'},{n:'Análisis',v:42000,col:'#1D9E75'},{n:'Check-ups',v:35000,col:'#378ADD'},{n:'RM',v:21000,col:'#D85A30'},{n:'Tomografía',v:19000,col:'#EF9F27'},{n:'Ultra',v:17000,col:'#D4537E'}];
+    new Chart(document.getElementById('cCatPie'),{type:'doughnut',data:{labels:cats.map(c=>c.n),datasets:[{data:cats.map(c=>c.v),backgroundColor:cats.map(c=>c.col),borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'70%',plugins:{legend:{display:false}}}});
+    const cl=document.getElementById('catLeg');cats.forEach(c=>{cl.innerHTML+=`<span class="leg-i"><span class="leg-sq" style="background:${c.col};"></span>${c.n}</span>`;});
+
+    const nb=[{n:'Biometría hemática',m:244236,r:0.24},{n:'Hb glucosilada',m:154611,r:0.09},{n:'Perfil tiroideo',m:150532,r:0.59},{n:'Urocultivo',m:109979,r:0.29},{n:'EGO',m:51567,r:0.48},{n:'Perfil lípidos',m:56359,r:0.23},{n:'Mastografía',m:65343,r:0.62}];
+    new Chart(document.getElementById('cNBchart'),{type:'bar',data:{labels:nb.map(d=>d.n),datasets:[{data:nb.map(d=>d.m),backgroundColor:nb.map(d=>d.r<0.3?'#E24B4A':d.r<0.8?'#EF9F27':'#1D9E75'),borderRadius:4}]},options:{indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:8}}},y:{ticks:{font:{size:9}}}}}});
+
+    const intd=[{n:'Brand',v:55,col:'#7F77DD'},{n:'Precio',v:18,col:'#1D9E75'},{n:'Infor.',v:15,col:'#378ADD'},{n:'Comp.',v:7,col:'#EF9F27'},{n:'Local',v:5,col:'#D4537E'}];
+    new Chart(document.getElementById('cIntent'),{type:'doughnut',data:{labels:intd.map(d=>d.n),datasets:[{data:intd.map(d=>d.v),backgroundColor:intd.map(d=>d.col),borderWidth:0}]},options:{responsive:true,maintainAspectRatio:false,cutout:'65%',plugins:{legend:{display:false}}}});
+    const ileg=document.getElementById('intentLeg');intd.forEach(d=>{ileg.innerHTML+=`<span class="leg-i"><span class="leg-sq" style="background:${d.col};"></span>${d.n} ${d.v}%</span>`;});
+
+    const clicks=[4350,4093,3712,2773,2112,4644,4516,4178,3974,2782,2202,4701,4611,4361,4147,3660,2706,2086,4675,4645,4386,4219,4883,3031,2409,5301,4928,4498,4218,3635,2552,1941,4563,4061,3811,3467,3320,2108,1728,4412,4308,4155,3860,3612,2517,2006,4119,4069,4031,3992,3724,2500,1928,2773,4479,4238,3921,3817,2657,2055,4559,4445,4111,3719,3625,2433,2050,4502,4132,3817,2548,2124,1344,1206,2412,2270,2171,1969,1877,1346,1141,2401,2609,1975,1752,1629,1160,1038,2054,1534,636,685,1614,1284,1256,2240,1733,1242,1308,3050,2406,2297,4332,4116,4430,4434,4287,3105,2290,4591,4691,4485,3985,3457,1987,1535,3113,3196,2987,2684,2755,1910,1459,3135,2917,2779,2554,2570,1692,1229,1660,2586,2962,2760,2325,1768,1353,2814,3626,4571,3388,2596,1568,1400,3135,2694,2657,2490,2274,1715,1150,2323,2430,2532,2337,2145,1712,1392,2737,2651,2786,2844,2510,1898,1350,3181,2965,2476,2243,2119,1352,1021,1447,2306,2390,2361,2158,1594,1211,2532];
+    const labels=clicks.map((_,i)=>i%14===0?'M'+(i/14+1):'');
+    const phaseColors=clicks.map((_,i)=>i<69?'#1D9E75':i<100?'#E24B4A':i<131?'#378ADD':'#EF9F27');
+    new Chart(document.getElementById('cTimeline'),{type:'bar',data:{labels,datasets:[{data:clicks,backgroundColor:phaseColors,borderRadius:1}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{font:{size:8}},grid:{display:false}},y:{ticks:{font:{size:8}},grid:{color:'#f1f1f1'}}}}});
+
+    const wkCtr=[3.05,3.15,3.10,3.30,3.15,2.90,2.60,2.75,2.70,1.45,1.25,1.20,1.80,2.10,1.60,1.20,1.20,1.15,1.20,1.10,1.25,1.30,1.10,1.20];
+    const wkPos=[7.9,7.8,7.8,7.9,7.7,7.8,7.4,7.3,7.6,9.2,8.8,10.0,8.2,7.9,7.3,7.2,7.0,6.6,6.5,6.5,6.2,6.0,5.8,6.2];
+    new Chart(document.getElementById('cCtrPos'),{type:'line',data:{labels:wkCtr.map((_,i)=>i+1),datasets:[{label:'CTR%',data:wkCtr,borderColor:'#1D9E75',borderWidth:2,pointRadius:0,tension:0.4,yAxisID:'y'},{label:'Pos',data:wkPos,borderColor:'#E24B4A',borderWidth:2,pointRadius:0,tension:0.4,yAxisID:'y2'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{display:false},y:{position:'left',ticks:{font:{size:8}}},y2:{position:'right',reverse:true,ticks:{font:{size:8}},grid:{display:false}}}}});
+
+    new Chart(document.getElementById('cDevPie'),{type:'doughnut',data:{labels:['Móvil','Desktop','Tablet'],datasets:[{data:[72,27,1],backgroundColor:['#378ADD','#1D9E75','#EF9F27']}]},options:{responsive:true,maintainAspectRatio:false,cutout:'60%',plugins:{legend:{position:'bottom',labels:{font:{size:9},boxWidth:10}}}}});
+
+    new Chart(document.getElementById('cWeekday'),{type:'bar',data:{labels:['L','M','M','J','V','S','D'],datasets:[{data:[3456,3512,3480,3380,3190,1920,1650],backgroundColor:'#378ADD',borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{grid:{display:false}},y:{ticks:{font:{size:8}}}}}});
+
+    new Chart(document.getElementById('cChanConv'),{type:'bar',data:{labels:['Net','Org','Dir','Ref','Paid','Other'],datasets:[{data:[92,73,67,51,44,16],backgroundColor:['#378ADD','#1D9E75','#EF9F27','#888780','#7F77DD','#D85A30'],borderRadius:4}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{ticks:{callback:v=>v+'%',font:{size:8}}}}}});
+
+    new Chart(document.getElementById('cRadar'),{type:'radar',data:{labels:['Mob','Desk','Acc','Prac','SEO'],datasets:[{label:'Hoy',data:[56,57,88,100,83],borderColor:'#378ADD',backgroundColor:'rgba(55,138,221,0.1)'},{label:'Meta',data:[75,80,90,100,95],borderColor:'#1D9E75',borderDash:[5,5]}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{r:{min:40,max:100,ticks:{display:false}}}}});
+
+    const actions=[
+        {f:0,n:'Resolver 189 errores 5XX',imp:'Alto',eff:'Bajo',r:'Dev',u:'Crawl',fc:'#E24B4A',fl:'F0'},
+        {f:0,n:'Reducir TTFB 900ms → <200ms',imp:'Alto',eff:'Medio',r:'Dev',u:'+35K',fc:'#E24B4A',fl:'F0'},
+        {f:1,n:'Corregir 277 meta títulos >60 chars',imp:'Alto',eff:'Bajo',r:'SEO',u:'+20K',fc:'#EF9F27',fl:'F1'},
+        {f:1,n:'Limpiar 604 meta desc. duplicadas',imp:'Alto',eff:'Bajo',r:'SEO',u:'+15K',fc:'#EF9F27',fl:'F1'},
+        {f:2,n:'Optimizar /estudios (pos. 17 → top 10)',imp:'Alto',eff:'Medio',r:'SEO',u:'+20K',fc:'#378ADD',fl:'F2'},
+        {f:2,n:'Schema MedicalTest — 100 páginas',imp:'Alto',eff:'Medio',r:'Dev',u:'+18K',fc:'#378ADD',fl:'F2'},
+        {f:3,n:'Blog informacional (biometría, HbA1c...)',imp:'Alto',eff:'Alto',r:'Content',u:'+20K',fc:'#1D9E75',fl:'F3'}
+    ];
+    const ic={'Alto':'#E24B4A','Medio':'#EF9F27','Bajo':'#888780'};
+    const ec={'Alto':'#E24B4A','Medio':'#EF9F27','Bajo':'#1D9E75'};
+    const rb=document.getElementById('rdBody');
+    actions.forEach((a,i)=>{
+        const bg=i%2===0?'var(--color-background-primary)':'var(--color-background-secondary)';
+        rb.innerHTML+=`<tr style="background:${bg};">
+            <td><span style="font-size:9px; font-weight:600; padding:2px 5px; border-radius:6px; background:${a.fc}15; color:${a.fc};">${a.fl}</span></td>
+            <td>${a.n}</td>
+            <td style="text-align:center;"><span style="font-size:9px; font-weight:600; padding:2px 6px; border-radius:6px; background:${ic[a.imp]}15; color:${ic[a.imp]};">${a.imp}</span></td>
+            <td style="text-align:center;"><span style="font-size:9px; font-weight:600; padding:2px 6px; border-radius:6px; background:${ec[a.eff]}15; color:${ec[a.eff]};">${a.eff}</span></td>
+            <td>${a.r}</td>
+            <td style="text-align:center; font-weight:600; color:${a.u.startsWith('+')?'#1D9E75':''};">${a.u}</td>
+        </tr>`;
+    });
+
+    new Chart(document.getElementById('cKpis'),{type:'bar',data:{labels:['CTR','Clics','Perf Mob','Errores','Titles','Schema'],datasets:[{label:'Baseline',data:[12,8.5,56,18,9,0],backgroundColor:'#E24B4A99'},{label:'90 d',data:[18,13,70,1,1,1.7],backgroundColor:'#EF9F2799'},{label:'180 d',data:[25,20,80,0,0,3.3],backgroundColor:'#1D9E7599'}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:'bottom',labels:{font:{size:9},boxWidth:8}}},scales:{y:{beginAtZero:true,ticks:{font:{size:8}}}}}});
+</script>
+
+</body>
+</html>
