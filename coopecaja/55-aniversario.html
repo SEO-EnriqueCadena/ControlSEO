@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coopecaja - 55 Aniversario: Premiamos de 5 en 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-gradient { background-color: #142472; }
+        .prize-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 scroll-smooth">
+
+    <nav class="sticky top-0 z-50 bg-[#005696] text-white shadow-lg">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <div class="bg-white p-1 rounded">
+                    <div class="text-[#005696] font-black text-xl italic leading-none">COOPECAJA <span class="text-orange-500">55</span></div>
+                </div>
+            </div>
+            <div class="hidden md:flex gap-6 text-sm font-medium uppercase tracking-wider">
+                <a href="#premios" class="hover:text-orange-400 transition">Premios</a>
+                <a href="#como-participar" class="hover:text-orange-400 transition">¿Cómo ganar?</a>
+                <a href="#faqs" class="hover:text-orange-400 transition">FAQs</a>
+                <a href="#reglamento" class="hover:text-orange-400 transition">Reglamento</a>
+            </div>
+            <a href="https://coopecaja.fi.cr/asociarse" class="bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded-full font-bold transition transform hover:scale-105 shadow-md text-sm">
+                ASOCIARME AQUÍ
+            </a>
+        </div>
+    </nav>
+
+    <section class="relative overflow-hidden hero-gradient text-white pt-16 pb-32 md:py-32">
+        <div class="container mx-auto px-4 relative flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2 text-center md:text-left z-10">
+                <span class="inline-block bg-orange-500 text-white px-4 py-1 rounded-full text-xs tracking-widest font-bold mb-4 uppercase">
+                    Promoción Oficial · Mayo - Octubre 2026
+                </span>
+                <h1 class="text-5xl md:text-7xl font-black mb-6 leading-tight">
+                    Premiamos de <br />
+                    <span class="text-cyan-400">5 en 5</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-lg leading-relaxed">
+                    Cumplimos 55 años siempre cerca de vos y lo celebramos regalando <span class="font-bold text-white underline decoration-cyan-400 decoration-4">55 premios espectaculares.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#premios" class="bg-cyan-400 text-[#005696] px-8 py-4 rounded-xl font-black text-lg shadow-xl hover:bg-white transition flex items-center justify-center gap-2">
+                        VER PREMIOS 
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path><path d="M4 22h16"></path><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path></svg>
+                    </a>
+                    <a href="#como-participar" class="border-2 border-white/30 hover:bg-white/10 px-8 py-4 rounded-xl font-bold text-lg transition flex items-center justify-center">
+                        ¿CÓMO GANAR?
+                    </a>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 relative flex justify-center items-center">
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-cyan-400 rounded-full blur-[80px] opacity-30 pointer-events-none"></div>
+    
+    <img 
+        src="C:\Users\Admin\Downloads\coopetito.png" 
+        alt="Coopetito - Mascota Oficial de Coopecaja" 
+        class="relative z-10 w-full max-w-md lg:max-w-lg object-contain drop-shadow-[0_25px_25px_rgba(0,0,0,0.35)] transition-transform duration-500 hover:scale-105 hover:-translate-y-2"
+    />
+    
+    <div class="absolute top-10 right-10 bg-white/10 backdrop-blur-sm p-3 rounded-2xl shadow-xl text-orange-400 transform rotate-12 animate-pulse border border-white/20">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+    </div>
+</div>
+
+        </div>
+    </section>
+
+    <section class="bg-white py-12 shadow-xl relative -mt-16 mx-4 rounded-3xl z-20 border border-slate-100 max-w-6xl lg:mx-auto">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-100">
+            <div>
+                <div class="text-5xl font-black text-[#005696] mb-1">55</div>
+                <div class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2">Años de Trayectoria</div>
+            </div>
+            <div>
+                <div class="text-5xl font-black text-orange-500 mb-1">55</div>
+                <div class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2">Premios en Total</div>
+            </div>
+            <div>
+                <div class="text-5xl font-black text-cyan-500 mb-1">6</div>
+                <div class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2">Sorteos Mensuales</div>
+            </div>
+            <div>
+                <div class="text-5xl font-black text-[#005696] mb-1">5</div>
+                <div class="text-slate-500 font-bold uppercase tracking-widest text-xs mt-2">Premios por Sorteo</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="premios" class="py-24 container mx-auto px-4">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-black text-[#005696] mb-4 uppercase tracking-tight">Premios que podés ganar</h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">Desde tecnología de punta hasta viajes que te cambiarán la vida. Sorteos en la última semana de cada mes.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="prize-card bg-white p-8 rounded-3xl border-b-4 border-slate-200 hover:border-orange-500 transition-all group">
+                <div class="w-16 h-16 bg-blue-50 text-[#005696] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-100 group-hover:text-orange-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-2 text-[#005696]">Viajes Increíbles</h3>
+                <p class="text-slate-500">Boletos aéreos a Europa (hasta $1200) y Latinoamérica (hasta $750).</p>
+            </div>
+            <div class="prize-card bg-white p-8 rounded-3xl border-b-4 border-slate-200 hover:border-orange-500 transition-all group">
+                <div class="w-16 h-16 bg-blue-50 text-[#005696] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-100 group-hover:text-orange-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12a10 10 0 0 1-10 10A10 10 0 0 1 2 12A10 10 0 0 1 12 2a10 10 0 0 1 10 10Z"></path><path d="m9 12 2 2 4-4"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-2 text-[#005696]">Motos Eléctricas</h3>
+                <p class="text-slate-500">Motos de última generación para tu movilidad sostenible.</p>
+            </div>
+            <div class="prize-card bg-white p-8 rounded-3xl border-b-4 border-slate-200 hover:border-orange-500 transition-all group">
+                <div class="w-16 h-16 bg-blue-50 text-[#005696] rounded-2xl flex items-center justify-center mb-6 group-hover:bg-orange-100 group-hover:text-orange-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect><path d="M12 18h.01"></path></svg>
+                </div>
+                <h3 class="text-2xl font-black mb-2 text-[#005696]">iPhone 17 y PS5</h3>
+                <p class="text-slate-500">Lo mejor en tecnología, iPads, Laptops y entretenimiento para la familia.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="como-participar" class="bg-slate-100 py-24">
+        <div class="container mx-auto px-4">
+            <div class="bg-[#005696] rounded-[3rem] p-12 text-white relative overflow-hidden shadow-2xl">
+                <div class="absolute bottom-0 right-0 w-64 h-64 bg-cyan-400 rounded-full blur-3xl opacity-20 translate-x-1/2 translate-y-1/2"></div>
+                
+                <div class="flex flex-col md:flex-row gap-12 items-center mb-16 relative z-10">
+                    <div class="md:w-2/3">
+                        <span class="text-cyan-400 font-bold tracking-widest uppercase text-sm mb-2 block">¿Cómo participar?</span>
+                        <h2 class="text-4xl font-black mb-4">Acumulá acciones, ganá premios</h2>
+                        <p class="text-blue-100 text-lg">La participación es automática por tus transacciones del 01 de mayo al 31 de octubre de 2026. ¡Cada acción es un número de sorteo!</p>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-10">
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl group hover:bg-white/10 transition">
+                        <div class="text-orange-400 mb-3 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <h4 class="font-black text-lg mb-1">Permanencia</h4>
+                        <p class="text-cyan-300 font-black inline-block bg-white/10 px-3 py-1 rounded-full text-xs mt-1 mb-2">2 Acciones</p>
+                        <p class="text-blue-200 text-xs leading-tight">Por mantenerte activo y al día en pagos al cierre del mes</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl group hover:bg-white/10 transition">
+                        <div class="text-orange-400 mb-3 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"></rect><line x1="2" x2="22" y1="10" y2="10"></line></svg>
+                        </div>
+                        <h4 class="font-black text-lg mb-1">Tarjetas</h4>
+                        <p class="text-cyan-300 font-black inline-block bg-white/10 px-3 py-1 rounded-full text-xs mt-1 mb-2">1 Acción</p>
+                        <p class="text-blue-200 text-xs leading-tight">Crédito: c/ ₡50,000 en compras. Débito: c/ ₡75,000 en compras</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl group hover:bg-white/10 transition">
+                        <div class="text-orange-400 mb-3 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z"/></svg>
+                        </div>
+                        <h4 class="font-black text-lg mb-1">Créditos</h4>
+                        <p class="text-cyan-300 font-black inline-block bg-white/10 px-3 py-1 rounded-full text-xs mt-1 mb-2">1 Acción</p>
+                        <p class="text-blue-200 text-xs leading-tight">Consumo: c/ ₡500,000. Hipotecario: c/ ₡5,000,000 desembolsados</p>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl group hover:bg-white/10 transition">
+                        <div class="text-orange-400 mb-3 flex justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/></svg>
+                        </div>
+                        <h4 class="font-black text-lg mb-1">Nuevos Asociados</h4>
+                        <p class="text-cyan-300 font-black inline-block bg-white/10 px-3 py-1 rounded-full text-xs mt-1 mb-2">1 Acción</p>
+                        <p class="text-blue-200 text-xs leading-tight">Por referir nuevos asociados o afiliarte a la cooperativa</p>
+                    </div>
+                    
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl group hover:bg-white/10 transition sm:col-span-2 lg:col-span-2 flex items-center text-left gap-4">
+                        <div class="text-orange-400 bg-white/10 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-lg mb-1">Ahorro / CDP / Coopecaja en Línea</h4>
+                            <p class="text-blue-200 text-sm leading-tight">Formaliza nuevos ahorros programados, CDP o activa tu cuenta en línea y recibe <strong>1 acción</strong> automática por cada producto.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/5 border border-white/10 p-6 rounded-2xl group hover:bg-white/10 transition sm:col-span-2 lg:col-span-2 flex items-center text-left gap-4">
+                        <div class="text-orange-400 bg-white/10 p-3 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6h-2.18c.07-.44.18-.88.18-1.33C18 2.54 16.46 1 14.67 1c-1.07 0-1.98.55-2.59 1.37l-.97 1.25-.97-1.25A3.27 3.27 0 0 0 7.67 1C5.88 1 4.33 2.54 4.33 4.67c0 .46.11.89.18 1.33H2c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2z"/></svg>
+                        </div>
+                        <div>
+                            <h4 class="font-black text-lg mb-1">Programa de Cesantía</h4>
+                            <p class="text-blue-200 text-sm leading-tight">Afíliate activamente al Programa de Cesantía de Coopecaja y recibe <strong>2 acciones</strong> adicionales.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faqs" class="py-24 bg-white border-t border-slate-200">
+        <div class="container mx-auto px-4 max-w-4xl" x-data="{ activeFaq: null }">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-[#005696] mb-2 uppercase tracking-tight">Preguntas Frecuentes</h2>
+                <p class="text-slate-600">Todo lo que necesitás saber de la promoción de forma rápida.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeFaq = (activeFaq === 1 ? null : 1)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-100 transition">
+                        ¿Quiénes pueden participar?
+                        <svg :class="activeFaq === 1 ? 'rotate-180' : ''" class="transition-transform text-[#005696]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeFaq === 1" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        Pueden participar todos los asociados físicos que se encuentren activos y al día en sus obligaciones con Coopecaja. No participan colaboradores internos ni personas jurídicas.
+                    </div>
+                </div>
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeFaq = (activeFaq === 2 ? null : 2)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-100 transition">
+                        ¿Cómo sé cuántas acciones tengo?
+                        <svg :class="activeFaq === 2 ? 'rotate-180' : ''" class="transition-transform text-[#005696]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeFaq === 2" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        Las acciones se asignan automáticamente por el sistema electrónico de Coopecaja basado en tus transacciones (créditos, uso de tarjetas, ahorros). No necesitás inscribirte manualmente.
+                    </div>
+                </div>
+                <div class="bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeFaq = (activeFaq === 3 ? null : 3)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-100 transition">
+                        ¿Qué pasa si gano un viaje?
+                        <svg :class="activeFaq === 3 ? 'rotate-180' : ''" class="transition-transform text-[#005696]" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeFaq === 3" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        Coopecaja cubre el costo del boleto hasta el monto máximo establecido ($1200 Europa / $750 LATAM). Si el boleto elegido es más caro, el ganador cubre la diferencia. El premio no incluye viáticos ni hospedaje.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reglamento" class="py-24 bg-slate-100 border-t border-slate-200">
+        <div class="container mx-auto px-4 max-w-4xl" x-data="{ activeBase: null }">
+            <div class="text-center mb-12">
+                <span class="text-cyan-600 font-bold tracking-widest uppercase text-sm mb-2 block">Bases y Reglamento</span>
+                <h2 class="text-3xl font-black text-[#005696] mb-4 uppercase tracking-tight">Condiciones de participación</h2>
+                <p class="text-slate-600">Conoce todas las reglas de esta promoción. La participación implica la aceptación total de las condiciones aquí descritas.</p>
+            </div>
+            
+            <div class="space-y-4">
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 1 ? null : 1)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 1 – Organizador y objeto de la promoción
+                        <svg :class="activeBase === 1 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 1" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <p>La promoción <strong>"Premiamos de 5 en 5, Coopecaja 55 aniversario"</strong> es organizada por <strong>COOPECAJA</strong> (Cooperativa de Ahorro y Crédito de las Personas Físicas y Jurídicas R.L., cédula jurídica 3-004-045110). La mecánica tiene como objeto reconocer y premiar la fidelidad, vinculación y uso de los productos y servicios por parte de sus asociados, en el marco de la celebración de su 55 aniversario.</p>
+                        <p class="mt-2">Esta mecánica se encuentra publicada en <a href="https://www.coopecaja.fi.cr/sorteos" class="text-orange-500 hover:underline" target="_blank">www.coopecaja.fi.cr/sorteos</a>.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 4 ? null : 4)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 4 – Vigencia
+                        <svg :class="activeBase === 4 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 4" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <p>La vigencia de la promoción se establece a partir del <strong>1 de mayo del 2026</strong> hasta el <strong>31 de octubre del 2026 a las 23:59 horas</strong>, en horario de días hábiles para COOPECAJA. Excepciones se avisarán previamente por redes sociales. En caso de fuerza mayor, COOPECAJA queda exonerada de aviso previo.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 6 ? null : 6)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 6 – Restricciones de participación
+                        <svg :class="activeBase === 6 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 6" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <p class="mb-2">No podrán participar:</p>
+                        <ul class="list-disc ml-5 space-y-1">
+                            <li>Colaboradores de COOPECAJA o personas bajo convenio outsourcing.</li>
+                            <li>Asociados en mora (30 días o más de atraso) o pre-mora (menos de 30 días), verificados al cierre del último día hábil del mes previo al sorteo.</li>
+                            <li>Personas no asociadas, en estado de renuncia o excluidas de COOPECAJA.</li>
+                            <li>Menores de edad o sin documento de identificación válido reconocido por el Gobierno de Costa Rica.</li>
+                            <li>Personas jurídicas.</li>
+                            <li>Quienes hayan manifestado por escrito su negativa al uso de imagen o datos para efectos publicitarios.</li>
+                            <li>Cuentas con bloqueo u orden judicial de congelamiento.</li>
+                            <li>Personas fallecidas, declaradas en insolvencia o que incurran en fraude o simulación.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 7 ? null : 7)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 7 – Asignación de acciones
+                        <svg :class="activeBase === 7 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 7" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <p>Las acciones se asignan automáticamente con base en los sistemas oficiales de COOPECAJA. Se acumulan de forma acumulativa y no se eliminan entre sorteos.</p>
+                        <p class="mt-2">No se reconocen fracciones de acción por montos inferiores a los umbrales. Si una transacción se revierte, las acciones generadas se deducen automáticamente. En el caso de afiliación a Coopecaja, la acción se asigna por única vez.</p>
+                        <p class="mt-2"><strong>Estado "al día":</strong> Se verifica al cierre de las 23:59 horas del último día hábil del mes previo al sorteo. Pagos posteriores a ese corte no se consideran para el sorteo inmediato.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 10 ? null : 10)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 10 – Limitaciones de los premios
+                        <svg :class="activeBase === 10 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 10" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li><strong>Intransferibles e incanjeables:</strong> No pueden cederse a terceros ni canjearse por otros bienes o servicios.</li>
+                            <li><strong>Personales:</strong> En caso de fallecimiento del ganador antes de la entrega, el derecho se extingue automáticamente.</li>
+                            <li><strong>Excluyentes:</strong> Una vez favorecido con un premio, el asociado no puede participar en los sorteos siguientes de esta promoción.</li>
+                            <li><strong>Boletos aéreos:</strong> Cobertura hasta el monto máximo definido. La diferencia es responsabilidad del ganador. No incluye hospedaje ni viáticos.</li>
+                            <li><strong>Impuestos:</strong> El ganador exonera a COOPECAJA de responsabilidad por impuestos, marchamos u otros gravámenes.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 11 ? null : 11)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 11 y 12 – Fechas y elección de ganadores
+                        <svg :class="activeBase === 11 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 11" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <p>Los sorteos se realizan en la <strong>última semana de cada mes</strong>. Ante situaciones excepcionales, COOPECAJA puede reprogramar con un máximo de dos semanas de prórroga.</p>
+                        <p class="mt-2">Los ganadores son seleccionados de forma <strong>aleatoria</strong> mediante un sistema electrónico. El proceso incluye verificación de requisitos y es supervisado por la Auditoría Interna, con al menos dos testigos internos. El resultado es firme e inapelable.</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 16 ? null : 16)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Artículo 16 – Retiro de premios
+                        <svg :class="activeBase === 16 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 16" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <ul class="list-disc ml-5 space-y-2">
+                            <li>El premio se entrega tras el sorteo, una vez firmado el documento 8F069 (Recepción del Premio).</li>
+                            <li>El premio debe reclamarse dentro de los <strong>30 días naturales</strong> posteriores a la notificación oficial.</li>
+                            <li>Para retirar el premio, el ganador debe tener sus <strong>datos actualizados</strong>. Si están desactualizados, tiene 30 días para corregirlos.</li>
+                            <li>COOPECAJA verificará que el asociado se mantenga al día antes de la entrega.</li>
+                            <li>Los ganadores serán publicados en el sitio web oficial y redes sociales de COOPECAJA.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
+                    <button @click="activeBase = (activeBase === 17 ? null : 17)" class="w-full px-8 py-6 text-left flex justify-between items-center font-bold text-lg hover:bg-slate-50 transition text-[#005696]">
+                        Privacidad, Uso de Imagen y Controversias (Art. 17, 21, 22-23)
+                        <svg :class="activeBase === 17 ? 'rotate-180' : ''" class="transition-transform" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"></path></svg>
+                    </button>
+                    <div x-show="activeBase === 17" x-collapse x-cloak class="px-8 pb-8 text-slate-600 leading-relaxed">
+                        <p><strong>Uso de Imagen:</strong> Al aceptar el premio, el ganador autoriza a COOPECAJA a utilizar su imagen y datos personales para fines publicitarios institucionales por un máximo de 2 años.</p>
+                        <p class="mt-2"><strong>Protección de Datos:</strong> Tratados bajo la Ley N.° 8968. Autoriza el uso para fines de la promoción y mercadeo. Mantiene derechos de acceso y rectificación.</p>
+                        <p class="mt-2"><strong>Controversias:</strong> Se resolverán de buena fe; caso contrario, se someterán a los tribunales de San José, Costa Rica. Los casos no previstos serán resueltos por la Gerencia Comercial.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#004070] text-white py-16 border-t border-white/10">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12 border-b border-white/10 pb-12">
+                <div>
+                    <div class="text-white font-black text-2xl mb-4 italic">COOPECAJA <span class="text-cyan-400">55</span></div>
+                    <p class="text-blue-200 text-sm leading-relaxed max-w-sm">
+                        Desde hace más de medio siglo, somos tu aliado financiero, acompañándote en cada paso para que cumplas tus sueños.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-cyan-400">Contacto</h4>
+                    <ul class="space-y-2 text-blue-100 text-sm">
+                        <li><strong>Central:</strong> 2542-1000</li>
+                        <li><strong>Web:</strong> <a href="https://www.coopecaja.fi.cr" target="_blank" class="hover:text-white transition">coopecaja.fi.cr</a></li>
+                        <li><strong>Email:</strong> <a href="mailto:info@coopecaja.fi.cr" class="hover:text-white transition">info@coopecaja.fi.cr</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg mb-4 text-cyan-400">Reglamento Legal</h4>
+                    <p class="text-sm text-blue-200 leading-tight mb-2">
+                        Bases completas disponibles en <a href="https://www.coopecaja.fi.cr/sorteos" target="_blank" class="text-white underline">www.coopecaja.fi.cr/sorteos</a>. Esta mecánica se publicará durante la vigencia de la promoción y 60 días posteriores.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-blue-300 text-xs">
+                <p>© 2026 COOPECAJA R.L. · Cédula jurídica 3-004-045110 · Todos los derechos reservados.</p>
+                <p class="mt-2 md:mt-0 opacity-50">S.G.C Código 7F019, v7</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
